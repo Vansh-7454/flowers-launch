@@ -24,16 +24,17 @@ export function SectionHeader({
     <div className={`max-w-[660px] mb-12 md:mb-16 ${alignClass} ${className}`}>
       {eyebrow && (
         <div
-          className={`text-eyebrow mb-2.5 font-semibold tracking-[0.14em] uppercase ${
-            isDark ? "text-[#F2C94C]" : "text-[#6546A5]"
+          className={`inline-flex items-center gap-2 text-eyebrow mb-2.5 font-bold tracking-[0.16em] uppercase ${
+            isDark ? "text-[#D5FF32]" : "text-[#291638]"
           }`}
         >
-          {eyebrow}
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]" aria-hidden="true" />
+          <span>{eyebrow}</span>
         </div>
       )}
       <h2
         className={`text-h2 font-heading tracking-tight mb-3.5 ${
-          isDark ? "text-[#FCFAF7]" : "text-[#291B35]"
+          isDark ? "text-[#FCFAFF]" : "text-[#291638]"
         }`}
       >
         {heading}
@@ -41,7 +42,7 @@ export function SectionHeader({
       {intro && (
         <p
           className={`text-intro ${
-            isDark ? "text-[#D8CEE2]" : "text-[#716879]"
+            isDark ? "text-[#B3A8C4]" : "text-[#716879]"
           }`}
         >
           {intro}

@@ -19,8 +19,8 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#FCFAF7",
-          border: "16px solid #291B35",
+          backgroundColor: "#F8F5FF",
+          border: "16px solid #291638",
           padding: "60px",
           fontFamily: "serif",
         }}
@@ -34,12 +34,12 @@ export default function OpenGraphImage() {
             width: "76px",
             height: "76px",
             borderRadius: "38px",
-            backgroundColor: "#291B35",
-            color: "#F2C94C",
+            backgroundColor: "#291638",
+            color: "#D5FF32",
             marginBottom: "20px",
             fontSize: "36px",
             fontWeight: "bold",
-            border: "2px solid #CDB8F4",
+            border: "2px solid #BDA0FF",
           }}
         >
           SGF
@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
           style={{
             fontSize: "64px",
             fontWeight: "bold",
-            color: "#291B35",
+            color: "#291638",
             letterSpacing: "-0.02em",
             textAlign: "center",
             marginBottom: "10px",
@@ -59,12 +59,12 @@ export default function OpenGraphImage() {
           {siteContent.brand.name}
         </div>
 
-        {/* City & Subtitle in Royal Plum */}
+        {/* City & Subtitle */}
         <div
           style={{
             fontSize: "22px",
             fontWeight: "600",
-            color: "#6546A5",
+            color: "#6E657A",
             letterSpacing: "0.15em",
             textTransform: "uppercase",
             marginBottom: "20px",
@@ -77,7 +77,7 @@ export default function OpenGraphImage() {
         <div
           style={{
             fontSize: "26px",
-            color: "#716879",
+            color: "#6E657A",
             textAlign: "center",
             maxWidth: "800px",
             lineHeight: 1.4,
@@ -93,10 +93,10 @@ export default function OpenGraphImage() {
             marginTop: "36px",
             padding: "12px 32px",
             borderRadius: "30px",
-            backgroundColor: "#F0E9FC",
-            border: "1px solid #E6DDED",
+            backgroundColor: "#E9DEFF",
+            border: "1px solid #BDA0FF",
             fontSize: "18px",
-            color: "#291B35",
+            color: "#291638",
             fontWeight: "600",
           }}
         >

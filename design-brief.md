@@ -1,33 +1,28 @@
 # Design Brief — Shree Ganesh Flowers (Florist, Pune)
 
 ## 1. Theme Name & Concept
-- **Theme Name**: *Lavender, Deep Plum & Natural Floral Accents*
-- **One-Sentence Concept**: A visually distinctive, premium, and culturally authentic digital presence combining the natural beauty of fresh temple offerings with the refined visual language of an independent editorial floral boutique.
+- **Theme Name**: *Lavender × Chartreuse 3D Floral Editorial*
+- **One-Sentence Concept**: A contemporary, art-directed floral boutique digital experience combining glossy lavender 3D sculptural ribbons, electric chartreuse accents, and orbital lines with authentic Indian temple garlands and sacred floral offerings.
 
 ## 2. Three Mood Words
-- **Devotional** (Reverent, sacred, grounded in daily temple rituals)
-- **Fresh** (Crisp morning blooms, fragrant jasmine, vibrant marigolds)
-- **Trustworthy** (Clear early hours, advance ordering clarity, pay-at-pickup honesty)
+- **Futuristic Editorial** (Glossy 3D forms, electric lime accents, oversized typography)
+- **Devotional Freshness** (Crisp morning blooms, fragrant jasmine, vibrant marigolds)
+- **Trustworthy Craft** (Authentic Pune temple tradition, 1-day advance garland booking, pay-at-pickup honesty)
 
 ## 3. Full Colour Palette & WCAG AA Contrast Ratios
-Designed strictly with the 60-30-10 principle: 60% warm ivory & pure white surface, 30% deep plum text & royal plum interactive elements, 10% natural floral accents (marigold orange, yellow, rose pink, leaf green).
 
 | Token | Hex Value | Role & Usage | WCAG AA Contrast Ratio |
 |---|---|---|---|
-| **Background (Warm Ivory)** | `#FCFAF7` | Primary canvas base | Baseline |
-| **Surface (Pure White)** | `#FFFFFF` | Cards, elevated containers | 1.05:1 on bg |
-| **Surface Lavender (Pale Lilac)** | `#F0E9FC` | Soft section panels, badge tiles | 1.15:1 on bg |
-| **Text (Deep Plum)** | `#291B35` | High-contrast body & headlines | **14.2:1** on Warm Ivory (AAA Pass) |
-| **Text-Muted (Muted Plum)** | `#716879` | Secondary text, captions, metadata | **5.4:1** on Warm Ivory (AA Pass) |
-| **Royal Plum** | `#6546A5` | Primary buttons, active nav, links | **6.5:1** on Warm Ivory (AAA Pass) |
-| **Soft Lavender** | `#CDB8F4` | Delicate borders, icon accents | 1.6:1 on bg |
-| **Soft Border** | `#E6DDED` | Subtle 1px dividers and borders | High tactile clarity |
-| **Marigold Orange (Accent)** | `#E99A28` | Auspicious CTAs, WhatsApp buttons | **4.2:1** on Warm Ivory (AA Large/Bold) |
-| **Marigold Yellow (Accent)** | `#F2C94C` | Morning sunlight highlights | Restrained accent |
-| **Leaf Green (Accent)** | `#667C54` | Fresh foliage, live open status | **4.8:1** on Warm Ivory (AA Pass) |
-| **Dark Band (Deep Plum)** | `#291B35` | Closing CTA, footer | Base for dark blocks |
-| **Dark Band Text** | `#FCFAF7` | Text on Dark Band | **14.2:1** on Dark Band (AAA Pass) |
-| **Dark Band Accent** | `#F2C94C` | Highlight text on Dark Band | **10.5:1** on Dark Band (AAA Pass) |
+| **Lavender** | `#BDA0FF` | Saturated lavender accents, hero ribbons, orbital glow | Distinctive brand identity |
+| **Pale Lavender** | `#E9DEFF` | Soft editorial section backgrounds, badge tiles | 1.18:1 on soft white |
+| **Deep Plum** | `#291638` | Primary headlines, navigation, high-contrast text, dark bands | **14.8:1** on Soft White (AAA Pass) |
+| **Chartreuse** | `#D5FF32` | Electric neon accent for CTA buttons, orbital lines, live badge dots | **12.4:1** with Deep Plum text (AAA Pass) |
+| **Soft White** | `#F8F5FF` | Clean editorial canvas, card containers | Baseline |
+| **Warm Ivory** | `#FCFAF7` | Secondary base canvas | Neutral warm undertone |
+| **Muted Text** | `#6E657A` | Supportive editorial copy, captions, timestamps | **5.2:1** on Soft White (AA Pass) |
+| **Subtle Border** | `#E2D8F1` | Fine 1px editorial borders | Tactile separation |
+| **Marigold (Accent)** | `#F49A24` | Authentic zendu flower highlight | Floral warmth |
+| **Rose (Accent)** | `#D93476` | Rose varmala petal highlight | Floral warmth |
 
 ## 4. Typography System
 - **Heading Font**: `DM Serif Display` (Google Fonts via `next/font/google`).
@@ -35,24 +30,24 @@ Designed strictly with the 60-30-10 principle: 60% warm ivory & pure white surfa
 - **Body Font**: `Inter` (Google Fonts via `next/font/google`).
   - *Why it fits*: Clean, geometric clarity with excellent legibility for Indian timings (`5:30 AM`), phone formatting (`+91`), and Marathi/Indian English terms (`Pooja`, `Varmala`, `Durva`).
 - **Scale**:
-  - Display (Hero): Fluid `clamp(2.75rem, 5vw, 4.25rem)` (44px mobile / 68px desktop), Line-height: `1.10`, Letter-spacing: `-0.02em`
+  - Hero Display (Desktop): `clamp(2.625rem, 5.5vw, 4.75rem)` (~42px mobile / ~76px desktop), Line-height: `1.08`, Letter-spacing: `-0.025em`
   - H1: `clamp(2.25rem, 4vw, 3.25rem)` (36px to 52px), Line-height: `1.15`
   - H2: `clamp(1.75rem, 3vw, 2.35rem)` (28px to 38px), Line-height: `1.20`
   - H3: `clamp(1.25rem, 2vw, 1.45rem)` (20px to 23px), Line-height: `1.25`
   - Body: `1rem` (16px), Line-height: `1.6`
-  - Small / Caption / Eyebrow: `0.75rem` (12px) to `0.875rem` (14px), uppercase letter-spacing `0.14em`
+  - Small / Caption / Eyebrow: `0.75rem` (12px) to `0.875rem` (14px), uppercase letter-spacing `0.16em`
 
 ## 5. Logo Concept
-- A minimalist geometric 8-petaled sacred floral motif (hinting at traditional marigold offerings and threshold kolam patterns) centering on a solid auspicious bindu dot in marigold orange.
-- Paired with a stately wordmark set in DM Serif Display ("SHREE GANESH FLOWERS") and a subtle tracked subtitle ("PUNE · TEMPLE FLORIST") that scales down cleanly to 24px without loss of detail.
+- A minimalist geometric 8-petaled sacred floral motif centering on a solid auspicious bindu dot in electric chartreuse (`#D5FF32`) with saturated lavender inner ring (`#BDA0FF`).
+- Paired with an editorial wordmark set in DM Serif Display ("SHREE GANESH FLOWERS") and a subtle tracked subtitle ("PUNE · TEMPLE FLORIST") that scales cleanly to mobile viewports.
 
-## 6. Hero Layout Choice & Hero Image
-- **Layout Choice**: **Layout A (Editorial Asymmetrical Split)**
-  - Left 6 columns: Eyebrow (`FRESH FLOWERS & GARLANDS · PUNE TEMPLE FLORIST`), fluid headline (`Fresh Flowers. Sacred Moments.`), short supportive paragraph explaining daily fresh availability and WhatsApp ordering, live early-morning status badge (`Open Now · From 5:30 AM`), primary action (`Order on WhatsApp`), secondary action (`Browse All Occasions`), and a 3-fact trust strip.
-  - Right 6 columns: Large 4:5 image set in a 20px rounded radius container with a pale lavender offset border and soft layered shadow, depicting fresh morning marigold and jasmine garlands arranged in traditional cane baskets.
+## 6. Hero Layout Choice & Hero Artwork
+- **Layout Choice**: **Asymmetrical Editorial 3D Composition**
+  - Left 6 columns: Tracked eyebrow label (`FRESH FLOWERS & HANDCRAFTED GARLANDS · PUNE TEMPLE PRECINCT`) with electric chartreuse neon orb, oversized headline (`Fresh Flowers. Sacred Moments.`), short supportive narrative, high-contrast chartreuse WhatsApp CTA (`#D5FF32` with `#291638` text), secondary browse button, and live status badge with glowing chartreuse indicator.
+  - Right 6 columns: 3D composition with gentle floating motion (`animate-gentle-float`), featuring glossy lavender sculptural ribbons intertwined with fresh Indian marigold and rose garlands, glowing chartreuse orbital SVG tracks, and floating spheres.
 
 ## 7. Image Plan & Assets
-1. `public/images/home/hero.webp` (4:5) — Fresh morning marigolds, jasmine veni, and pooja blooms in cane baskets.
+1. `public/images/home/hero-3d.webp` (4:3) — Custom glossy 3D lavender ribbon sculpture intertwined with fresh marigold and rose garlands, chartreuse spheres, and floating petals.
 2. `public/images/occasions/pooja-flowers.webp` (4:3) — Fresh loose pooja flowers, sacred durva grass, hibiscus, and marigold packets.
 3. `public/images/occasions/wedding-garlands.webp` (4:3) — Handcrafted royal rose-petal and tuberose varmala for wedding ceremonies.
 4. `public/images/occasions/bouquets.webp` (4:3) — Fresh celebration cut-flower bouquets wrapped in sustainable paper.

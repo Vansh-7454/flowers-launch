@@ -37,7 +37,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 h-[64px] md:h-[72px] bg-[#FCFAF7]/95 backdrop-blur-md border-b border-[#E6DDED] transition-colors">
+      <header className="sticky top-0 z-40 h-[64px] md:h-[72px] bg-[#FCFAFF]/95 backdrop-blur-md border-b border-[#DCCCF7] transition-colors">
         <div className="site-container h-full flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <div className="flex items-center gap-3">
@@ -55,17 +55,23 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[0.9375rem] font-medium py-1.5 transition-colors relative ${
+                  className={`text-[0.9375rem] font-medium py-1.5 transition-colors relative flex items-center gap-1.5 ${
                     isActive
-                      ? "text-[#6546A5] font-semibold"
-                      : "text-[#291B35] hover:text-[#6546A5]"
+                      ? "text-[#291638] font-bold"
+                      : "text-[#716879] hover:text-[#291638]"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
-                  {link.label}
                   {isActive && (
                     <span
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#6546A5] rounded-full"
+                      className="w-1.5 h-1.5 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <span>{link.label}</span>
+                  {isActive && (
+                    <span
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#291638] rounded-full"
                       aria-hidden="true"
                     />
                   )}
@@ -74,17 +80,17 @@ export function Header() {
             })}
           </nav>
 
-          {/* Actions: Live Shop Status & Order on WhatsApp CTA */}
+          {/* Actions: Live Shop Status & Polished Deep-Plum WhatsApp Action */}
           <div className="hidden lg:flex items-center gap-4">
             <OpenStatusBadge compact />
             <a
               href={generalWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-sm h-[44px] px-5"
+              className="inline-flex items-center justify-center gap-2 h-[42px] px-5 rounded-[12px] bg-[#291638] text-white hover:bg-[#3D2252] font-semibold text-sm border border-[#291638] shadow-sm hover:shadow-md transition-all cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#291638]"
               id="header-whatsapp-btn"
             >
-              <MessageCircle className="w-4 h-4 text-white" aria-hidden="true" />
+              <MessageCircle className="w-4 h-4 text-[#D5FF32]" aria-hidden="true" />
               <span>Order on WhatsApp</span>
             </a>
           </div>
@@ -95,15 +101,15 @@ export function Header() {
               href={generalWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-11 h-11 rounded-[10px] bg-[#291B35] text-white"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] bg-[#291638] text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#291638]"
               aria-label="Order on WhatsApp"
             >
-              <MessageCircle className="w-5 h-5" aria-hidden="true" />
+              <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
             </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center w-11 h-11 rounded-[10px] border border-[#E6DDED] bg-[#FFFFFF] text-[#291B35]"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] border border-[#DCCCF7] bg-[#FCFAFF] text-[#291638]"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
               id="mobile-menu-toggle"
@@ -124,7 +130,7 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
-          className="fixed inset-0 top-[64px] z-50 bg-[#FCFAF7] flex flex-col p-6 border-t border-[#E6DDED] overflow-y-auto"
+          className="fixed inset-0 top-[64px] z-50 bg-[#FCFAFF] flex flex-col p-6 border-t border-[#DCCCF7] overflow-y-auto"
         >
           <div className="mb-6">
             <OpenStatusBadge />
@@ -138,10 +144,10 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg py-3 px-4 rounded-[10px] font-medium transition-colors ${
+                  className={`text-lg py-3 px-4 rounded-[12px] font-medium transition-colors ${
                     isActive
-                      ? "bg-[#6546A5] text-white font-semibold"
-                      : "text-[#291B35] bg-[#FFFFFF] border border-[#E6DDED] hover:bg-[#F0E9FC]"
+                      ? "bg-[#291638] text-white font-semibold"
+                      : "text-[#291638] bg-[#EEE6FF]/50 border border-[#DCCCF7] hover:bg-[#D7C5FF]/30"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -151,7 +157,7 @@ export function Header() {
             })}
           </nav>
 
-          <div className="mt-8 pt-6 border-t border-[#E6DDED] flex flex-col gap-3">
+          <div className="mt-8 pt-6 border-t border-[#DCCCF7] flex flex-col gap-3">
             <a
               href={generalWhatsAppUrl}
               target="_blank"

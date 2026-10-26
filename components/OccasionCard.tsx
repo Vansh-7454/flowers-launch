@@ -11,9 +11,9 @@ interface OccasionCardProps {
 export function OccasionCard({ occasion, featured = false }: OccasionCardProps) {
   const whatsappUrl = getWhatsAppUrl(occasion.whatsappPrefill);
 
-  // Line icon with stroke width 1.5 in Royal Plum
+  // Line icon with stroke width 1.75 in Deep Plum
   const renderIcon = () => {
-    const props = { className: "w-5 h-5 text-[#6546A5]", strokeWidth: 1.5 };
+    const props = { className: "w-5 h-5 text-[#291638]", strokeWidth: 1.75 };
     switch (occasion.iconName) {
       case "Flower2":
         return <Flower2 {...props} aria-hidden="true" />;
@@ -35,8 +35,8 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
   return (
     <article
       id={occasion.id}
-      className={`site-card flex flex-col overflow-hidden ${
-        featured ? "border-[#CDB8F4] bg-[#FFFFFF] ring-1 ring-[#CDB8F4]/50" : ""
+      className={`site-card flex flex-col overflow-hidden bg-[#FCFAFF] ${
+        featured ? "border-[#B99AFF] ring-1 ring-[#B99AFF]/50" : ""
       }`}
     >
       {/* Product Photography */}
@@ -49,11 +49,11 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
 
-        {/* Advance Notice Pill for Garlands */}
+        {/* Advance Notice Pill for Garlands in Deep Plum & Electric Chartreuse */}
         {isGarland && (
           <div className="absolute top-3 right-3 z-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[8px] bg-[#291B35]/90 text-white text-xs font-medium shadow-xs backdrop-blur-sm border border-white/10">
-              <Clock className="w-3.5 h-3.5 text-[#F2C94C]" aria-hidden="true" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[10px] bg-[#291638]/92 text-[#FCFAFF] text-xs font-semibold shadow-md backdrop-blur-md border border-[#B99AFF]/30">
+              <Clock className="w-3.5 h-3.5 text-[#D5FF32]" aria-hidden="true" />
               <span>Order 1 day in advance</span>
             </span>
           </div>
@@ -65,16 +65,17 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         {/* Category & Title */}
         <div className="flex items-start gap-3.5 mb-4">
           <div
-            className="w-11 h-11 rounded-[12px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]"
+            className="w-11 h-11 rounded-[14px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs"
             aria-hidden="true"
           >
             {renderIcon()}
           </div>
           <div>
-            <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#6546A5] block">
+            <span className="text-[11px] uppercase tracking-[0.16em] font-bold text-[#291638] flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D5FF32] shadow-[0_0_4px_#D5FF32]" />
               {occasion.subtitle}
             </span>
-            <h3 className="font-heading text-xl md:text-2xl text-[#291B35] font-semibold mt-0.5">
+            <h3 className="font-heading text-xl md:text-2xl text-[#291638] font-bold mt-1">
               {occasion.title}
             </h3>
           </div>
@@ -86,15 +87,15 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         </p>
 
         {/* Fresh Flower Stems */}
-        <div className="mb-5 pt-4 border-t border-[#E6DDED]">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#291B35] block mb-2">
+        <div className="mb-5 pt-4 border-t border-[#DCCCF7]">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[#291638] block mb-2">
             Fresh flower elements:
           </span>
           <div className="flex flex-wrap gap-1.5">
             {occasion.keyFlowers.map((flower) => (
               <span
                 key={flower}
-                className="px-2.5 py-1 rounded-[6px] bg-[#F0E9FC]/60 text-[#291B35] text-xs font-medium border border-[#E6DDED]"
+                className="px-2.5 py-1 rounded-[8px] bg-[#EEE6FF]/70 text-[#291638] text-xs font-medium border border-[#DCCCF7]"
               >
                 {flower}
               </span>
@@ -103,8 +104,8 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         </div>
 
         {/* Timing Guideline */}
-        <div className="mt-auto mb-6 p-3 rounded-[10px] bg-[#F0E9FC]/40 border border-[#E6DDED] text-xs text-[#716879]">
-          <strong className="text-[#291B35] font-semibold">Timing note: </strong>
+        <div className="mt-auto mb-6 p-3 rounded-[12px] bg-[#EEE6FF]/50 border border-[#DCCCF7] text-xs text-[#716879]">
+          <strong className="text-[#291638] font-bold">Timing note: </strong>
           {occasion.advanceNotice}
         </div>
 
@@ -113,10 +114,10 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-accent w-full justify-center group"
+          className="btn-primary w-full justify-center group"
           id={`order-${occasion.id}-btn`}
         >
-          <MessageCircle className="w-4 h-4 text-white" aria-hidden="true" />
+          <MessageCircle className="w-4 h-4 text-[#D5FF32]" aria-hidden="true" />
           <span>Order {occasion.title} on WhatsApp</span>
         </a>
       </div>

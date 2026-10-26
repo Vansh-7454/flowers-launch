@@ -17,10 +17,10 @@ export function LogoIcon({ className = "w-9 h-9" }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      {/* Auspicious Central Bindu Dot */}
-      <circle cx="24" cy="24" r="3.5" fill="currentColor" stroke="none" />
-      {/* Sacred Inner Petal Ring */}
-      <circle cx="24" cy="24" r="7.5" stroke="currentColor" strokeWidth="1.5" />
+      {/* Auspicious Central Bindu Dot in Electric Chartreuse */}
+      <circle cx="24" cy="24" r="3.5" fill="#D5FF32" stroke="none" />
+      {/* Sacred Inner Petal Ring in Saturated Lavender */}
+      <circle cx="24" cy="24" r="7.5" stroke="#BDA0FF" strokeWidth="1.5" />
       
       {/* 8 Geometric Lotus / Marigold Petals */}
       {/* North & South Petals */}
@@ -104,7 +104,7 @@ export function Logo({
     return (
       <Link
         href="/"
-        className={`inline-flex items-center text-inherit hover:opacity-90 transition-opacity ${className}`}
+        className={`inline-flex items-center text-[#BDA0FF] hover:opacity-90 transition-opacity ${className}`}
         aria-label={`${siteContent.brand.name} - Home`}
       >
         <LogoIcon className="w-8 h-8 md:w-9 md:h-9" />
@@ -118,14 +118,14 @@ export function Logo({
       className={`inline-flex items-center gap-3 text-inherit no-underline group ${className}`}
       aria-label={`${siteContent.brand.name} - Home`}
     >
-      <div className="flex-shrink-0 transition-transform duration-200 group-hover:scale-105 text-[#6546A5]">
+      <div className="flex-shrink-0 transition-transform duration-200 group-hover:scale-105 text-[#291638]">
         <LogoIcon className="w-8 h-8 md:w-9 md:h-9" />
       </div>
       <div className="flex flex-col leading-none">
-        <span className="font-heading text-[18px] md:text-[20px] font-bold tracking-tight text-[#291B35]">
+        <span className="font-heading text-[18px] md:text-[20px] font-bold tracking-tight text-[#291638]">
           {siteContent.brand.name}
         </span>
-        <span className="text-[10px] md:text-[11px] uppercase tracking-[0.16em] font-medium text-[#716879] mt-1">
+        <span className="text-[10px] md:text-[11px] uppercase tracking-[0.16em] font-semibold text-[#6E657A] mt-1">
           {siteContent.brand.tradeSubtitle}
         </span>
       </div>

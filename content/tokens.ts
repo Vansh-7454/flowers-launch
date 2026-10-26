@@ -6,28 +6,36 @@
 
 export const designTokens = {
   colors: {
-    // Primary Palette
-    deepPlum: "#291B35",      // Headlines, prominent text, deep contrast sections
-    royalPlum: "#6546A5",     // Primary interactive elements, links, emphasis
-    softLavender: "#CDB8F4",  // Subtle borders, card highlights, icon accents
-    paleLilac: "#F0E9FC",     // Soft section backgrounds, badge tiles
-    warmIvory: "#FCFAF7",     // Primary canvas base background
-    pureWhite: "#FFFFFF",     // Card containers, elevated surfaces
-    mutedText: "#716879",     // Supportive copy, captions, timestamps
-    softBorder: "#E6DDED",    // Subtle 1px dividers and borders
+    // Primary colours (Exact prompt palette)
+    vibrantLavender: "#B99AFF", // Vibrant Lavender - dominant hero tone
+    lightLavender: "#D7C5FF",   // Light Lavender - full hero canvas
+    paleLavender: "#EEE6FF",    // Pale Lavender - editorial panels & chips
+    deepPlum: "#291638",        // Deep Plum - typography, headers, dark bands
+    chartreuse: "#D5FF32",      // Chartreuse Green - electric spheres, orbital line, primary action
+    freshLeafGreen: "#7DA34A",  // Fresh Leaf Green - natural foliage, open badge
+    softWhite: "#FCFAFF",       // Soft White - card surfaces, clean content
+    
+    // Floral accents
+    marigold: "#F49A24",        // Marigold Orange
+    rose: "#D93476",            // Rose Pink
+    jasmine: "#FFF9EE",         // Jasmine White
 
-    // Natural Floral Accents (Restrained, inspired by real temple offerings)
-    marigoldOrange: "#E99A28", // Auspicious warm highlight, CTAs, morning pooja
-    marigoldYellow: "#F2C94C", // Morning dawn sunshine, subtle badge highlights
-    rosePink: "#D995A9",       // Varmala rose petal accent
-    leafGreen: "#667C54",      // Natural foliage, live open status
-    freshWhiteFlower: "#F7F2E8", // Jasmine & mogra petal off-white
+    // Text & borders
+    mutedText: "#716879",       // Muted supportive text
+    border: "#DCCCF7",          // Editorial borders & dividers
+
+    // Compatibility aliases
+    lavender: "#B99AFF",
+    leafGreen: "#7DA34A",
+    subtleBorder: "#DCCCF7",
   },
 
   typography: {
     headingFont: "var(--font-dm-serif), Georgia, serif",
     bodyFont: "var(--font-inter), system-ui, -apple-system, sans-serif",
     scales: {
+      heroDisplayDesktop: "clamp(4rem, 6vw, 5.5rem)", // 64px - 88px
+      heroDisplayMobile: "clamp(2.5rem, 5vw, 3.25rem)", // 40px - 52px
       display: "clamp(2.75rem, 5vw, 4.25rem)",
       h1: "clamp(2.25rem, 4vw, 3.25rem)",
       h2: "clamp(1.75rem, 3vw, 2.35rem)",
@@ -38,6 +46,7 @@ export const designTokens = {
       eyebrow: "0.75rem",
     },
     lineHeights: {
+      heroHeading: 1.08,
       heading: 1.15,
       body: 1.6,
       tight: 1.25,
@@ -45,14 +54,14 @@ export const designTokens = {
   },
 
   radii: {
-    button: "10px",
-    card: "16px",
-    visual: "20px",
+    button: "11px",
+    card: "18px",
+    visual: "24px",
     pill: "9999px",
   },
 
   spacing: {
-    containerMax: "1240px",
+    containerMax: "1260px",
     sectionY: "clamp(64px, 8vw, 112px)",
     sectionYCompact: "56px",
     gutterMobile: "20px",
@@ -60,9 +69,11 @@ export const designTokens = {
   },
 
   shadows: {
-    softCard: "0 2px 8px -2px rgba(41, 27, 53, 0.04), 0 8px 24px -4px rgba(41, 27, 53, 0.06)",
-    elevated: "0 12px 32px -4px rgba(41, 27, 53, 0.10)",
-    hoverLift: "0 14px 28px -4px rgba(101, 70, 165, 0.12)",
+    softCard: "0 2px 10px -2px rgba(41, 22, 56, 0.04), 0 8px 24px -4px rgba(41, 22, 56, 0.06)",
+    elevated: "0 16px 40px -8px rgba(41, 22, 56, 0.12)",
+    hoverLift: "0 14px 28px -4px rgba(189, 160, 255, 0.25)",
+    chartreuseGlow: "0 0 24px -2px rgba(213, 255, 50, 0.45)",
+    lavenderGlow: "0 12px 36px -6px rgba(189, 160, 255, 0.35)",
   },
 
   transitions: {

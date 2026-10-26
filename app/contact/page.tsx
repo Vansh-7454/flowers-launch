@@ -94,28 +94,31 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Compact Page Header */}
-      <section className="bg-[#F0E9FC]/40 border-b border-[#E6DDED] py-12 md:py-16">
+      <section className="bg-gradient-to-b from-[#EEE6FF] via-[#EEE6FF]/50 to-[#FCFAFF] border-b border-[#DCCCF7] py-12 md:py-16">
         <div className="site-container">
           <nav aria-label="Breadcrumb" className="mb-4">
             <ol className="flex items-center gap-2 text-xs text-[#716879]">
               <li>
-                <Link href="/" className="hover:text-[#6546A5] transition-colors">
+                <Link href="/" className="hover:text-[#291638] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3.5 h-3.5 text-[#CDB8F4]" />
+                <ChevronRight className="w-3.5 h-3.5 text-[#B99AFF]" />
               </li>
-              <li className="font-semibold text-[#291B35]" aria-current="page">
+              <li className="font-bold text-[#291638]" aria-current="page">
                 Contact & Location
               </li>
             </ol>
           </nav>
 
-          <span className="text-eyebrow text-[#6546A5] block mb-2 font-semibold">
-            PUNE TEMPLE FLORIST
-          </span>
-          <h1 className="text-h1 font-heading text-[#291B35] mb-3">
+          <div className="inline-flex items-center gap-2 mb-2.5">
+            <span className="w-2 h-2 rounded-full bg-[#D5FF32] shadow-[0_0_8px_#D5FF32]" />
+            <span className="text-eyebrow text-[#291638] font-bold tracking-[0.16em]">
+              PUNE TEMPLE FLORIST
+            </span>
+          </div>
+          <h1 className="text-h1 font-heading text-[#291638] mb-3">
             Contact our shop & visit in Pune
           </h1>
           <p className="text-intro text-[#716879]">
@@ -125,19 +128,19 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="site-section bg-[#FCFAF7]">
+      <section className="site-section bg-[#FCFAFF]">
         <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left Column: 6 cols — Contact Info Card & Action Buttons */}
             <div className="lg:col-span-6 space-y-8">
-              <div className="site-card p-6 md:p-8 space-y-6">
+              <div className="site-card p-6 md:p-8 space-y-6 bg-[#FCFAFF]">
                 {/* Live Status Header */}
-                <div className="flex items-center justify-between pb-6 border-b border-[#E6DDED]">
+                <div className="flex items-center justify-between pb-6 border-b border-[#DCCCF7]">
                   <div>
-                    <span className="text-xs uppercase tracking-wider font-semibold text-[#6546A5] block">
+                    <span className="text-xs uppercase tracking-wider font-bold text-[#291638] block">
                       CURRENT SHOP STATUS
                     </span>
-                    <h2 className="font-heading text-xl text-[#291B35] mt-0.5">
+                    <h2 className="font-heading text-xl text-[#291638] mt-0.5">
                       Early Morning Hours
                     </h2>
                   </div>
@@ -148,11 +151,11 @@ export default function ContactPage() {
                 <div className="space-y-5 text-sm md:text-base">
                   {/* Address */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
-                      <MapPin className="w-5 h-5 text-[#6546A5]" />
+                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                      <MapPin className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
-                      <strong className="text-[#291B35] block font-semibold mb-0.5">
+                      <strong className="text-[#291638] block font-bold mb-0.5">
                         Shop Address:
                       </strong>
                       <p className="text-[#716879] leading-relaxed">
@@ -163,16 +166,16 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
-                      <Phone className="w-5 h-5 text-[#6546A5]" />
+                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                      <Phone className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
-                      <strong className="text-[#291B35] block font-semibold mb-0.5">
+                      <strong className="text-[#291638] block font-bold mb-0.5">
                         Phone Call:
                       </strong>
                       <a
                         href={`tel:${siteContent.contact.phoneTel}`}
-                        className="text-[#6546A5] hover:underline font-medium"
+                        className="text-[#291638] hover:text-[#B99AFF] font-semibold transition-colors"
                       >
                         {siteContent.contact.phoneDisplay}
                       </a>
@@ -181,17 +184,17 @@ export default function ContactPage() {
 
                   {/* WhatsApp */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
-                      <MessageCircle className="w-5 h-5 text-[#6546A5]" />
+                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                      <MessageCircle className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
-                      <strong className="text-[#291B35] block font-semibold mb-0.5">
+                      <strong className="text-[#291638] block font-bold mb-0.5">
                         WhatsApp Enquiries & Orders:
                       </strong>
-                      <p className="text-[#716879] text-sm mb-1">
+                      <p className="text-[#716879] text-sm mb-1 font-medium">
                         {siteContent.contact.whatsappDisplay}
                       </p>
-                      <span className="text-xs text-[#E99A28] font-semibold">
+                      <span className="text-xs text-[#F49A24] font-bold">
                         Fastest way to check daily morning stock
                       </span>
                     </div>
@@ -199,14 +202,14 @@ export default function ContactPage() {
 
                   {/* Operating Hours */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
-                      <Clock className="w-5 h-5 text-[#6546A5]" />
+                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                      <Clock className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
-                      <strong className="text-[#291B35] block font-semibold mb-0.5">
+                      <strong className="text-[#291638] block font-bold mb-0.5">
                         Operating Hours:
                       </strong>
-                      <p className="text-[#291B35] font-medium">
+                      <p className="text-[#291638] font-semibold">
                         {siteContent.contact.openingHoursDisplay} · Daily
                       </p>
                       <p className="text-xs text-[#716879] mt-1">
@@ -217,8 +220,8 @@ export default function ContactPage() {
                 </div>
 
                 {/* Important Pickup Policy Box */}
-                <div className="p-4 rounded-[12px] bg-[#F0E9FC]/50 border border-[#E6DDED] text-xs text-[#716879] space-y-1">
-                  <div className="font-semibold text-[#291B35] flex items-center gap-1.5">
+                <div className="p-4 rounded-[14px] bg-[#EEE6FF]/50 border border-[#DCCCF7] text-xs text-[#716879] space-y-1">
+                  <div className="font-bold text-[#291638] flex items-center gap-1.5">
                     <span>Payment Policy:</span>
                   </div>
                   <p>{siteContent.contact.pickupPolicy}</p>
@@ -231,7 +234,7 @@ export default function ContactPage() {
               </div>
 
               {/* Shopfront Atmosphere Photo */}
-              <div className="shadow-md rounded-[20px] overflow-hidden border border-[#E6DDED]">
+              <div className="shadow-md rounded-[20px] overflow-hidden border border-[#DCCCF7]">
                 <SmartImage
                   src="/images/contact/shop-front.webp"
                   alt="Atmospheric entrance of Shree Ganesh Flowers stall near the temple in Pune"
@@ -244,11 +247,14 @@ export default function ContactPage() {
 
             {/* Right Column: 6 cols — Validated WhatsApp Message Composer */}
             <div className="lg:col-span-6">
-              <div className="site-card p-6 md:p-8">
-                <span className="text-eyebrow text-[#6546A5] block mb-2 font-semibold">
-                  MESSAGE COMPOSER
-                </span>
-                <h2 className="font-heading text-2xl text-[#291B35] mb-2">
+              <div className="site-card p-6 md:p-8 bg-[#FCFAFF]">
+                <div className="inline-flex items-center gap-2 mb-2">
+                  <span className="w-2 h-2 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]" />
+                  <span className="text-eyebrow text-[#291638] font-bold tracking-[0.16em]">
+                    MESSAGE COMPOSER
+                  </span>
+                </div>
+                <h2 className="font-heading text-2xl text-[#291638] mb-2 font-bold">
                   Prepare your order message
                 </h2>
                 <p className="text-sm text-[#716879] mb-6 leading-relaxed">
@@ -260,9 +266,9 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-name"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
                     >
-                      Your Name <span className="text-[#E99A28]">*</span>
+                      Your Name <span className="text-[#F49A24]">*</span>
                     </label>
                     <input
                       type="text"
@@ -271,9 +277,9 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="e.g. Ramesh Joshi"
-                      className={`w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border ${
-                        errors.name ? "border-red-500" : "border-[#E6DDED]"
-                      } text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]`}
+                      className={`w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
+                        errors.name ? "border-red-500" : "border-[#DCCCF7]"
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]`}
                       required
                     />
                     {errors.name && (
@@ -287,9 +293,9 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-phone"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
                     >
-                      Mobile Phone (India 10-digits) <span className="text-[#E99A28]">*</span>
+                      Mobile Phone (India 10-digits) <span className="text-[#F49A24]">*</span>
                     </label>
                     <input
                       type="tel"
@@ -299,9 +305,9 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="e.g. 98220 12345"
-                      className={`w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border ${
-                        errors.phone ? "border-red-500" : "border-[#E6DDED]"
-                      } text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]`}
+                      className={`w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
+                        errors.phone ? "border-red-500" : "border-[#DCCCF7]"
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]`}
                       required
                     />
                     {errors.phone && (
@@ -315,7 +321,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-occasion"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
                     >
                       Select Occasion / Flower Type
                     </label>
@@ -324,7 +330,7 @@ export default function ContactPage() {
                       name="occasion"
                       value={formData.occasion}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border border-[#E6DDED] text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]"
+                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#DCCCF7] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]"
                     >
                       <option value="Pooja Flowers">Daily Pooja Flowers (Loose marigolds, durva, hibiscus)</option>
                       <option value="Wedding Garlands">Wedding Garlands (Varmala) — 1 day in advance</option>
@@ -339,7 +345,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-pickup"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
                     >
                       Preferred Pickup Timing
                     </label>
@@ -348,7 +354,7 @@ export default function ContactPage() {
                       name="pickupTime"
                       value={formData.pickupTime}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border border-[#E6DDED] text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]"
+                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#DCCCF7] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]"
                     >
                       <option value="Early Dawn (5:30 AM - 7:00 AM)">Early Dawn (5:30 AM – 7:00 AM) · Pre-darshan</option>
                       <option value="Morning (7:00 AM - 11:00 AM)">Morning (7:00 AM – 11:00 AM)</option>
@@ -361,7 +367,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-message"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
                     >
                       Specific Requirements (Optional)
                     </label>
@@ -372,9 +378,9 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="e.g. Need 2 varmala sets in red rose petals, pickup tomorrow at 7 AM"
-                      className={`w-full p-4 rounded-[10px] bg-[#FFFFFF] border ${
-                        errors.message ? "border-red-500" : "border-[#E6DDED]"
-                      } text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]`}
+                      className={`w-full p-4 rounded-[12px] bg-[#FCFAFF] border ${
+                        errors.message ? "border-red-500" : "border-[#DCCCF7]"
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]`}
                     />
                     {errors.message && (
                       <p className="text-xs text-red-600 mt-1 font-medium">
@@ -383,21 +389,21 @@ export default function ContactPage() {
                     )}
                   </div>
 
-                  {/* Submit Action */}
+                  {/* Submit Action: High-Contrast Chartreuse Button */}
                   <button
                     type="submit"
-                    className="btn-accent w-full justify-center text-sm font-semibold"
+                    className="inline-flex items-center justify-center gap-2 min-h-[48px] w-full px-6 rounded-[12px] bg-[#D5FF32] text-[#291638] font-bold text-sm border border-[#C4ED20] hover:bg-[#C5F220] shadow-[0_4px_16px_-2px_rgba(213,255,50,0.4)] transition-all cursor-pointer"
                     id="submit-enquiry-btn"
                   >
-                    <Send className="w-4 h-4 text-white" />
+                    <Send className="w-4 h-4 text-[#291638]" />
                     <span>Open Message in WhatsApp</span>
                   </button>
 
                   {/* Privacy Notice */}
-                  <div className="p-3 rounded-[10px] bg-[#F0E9FC]/50 border border-[#E6DDED] text-[11px] text-[#716879] flex items-start gap-2">
-                    <ShieldAlert className="w-4 h-4 text-[#6546A5] flex-shrink-0 mt-0.5" />
+                  <div className="p-3.5 rounded-[12px] bg-[#EEE6FF]/60 border border-[#DCCCF7] text-[11px] text-[#716879] flex items-start gap-2">
+                    <ShieldAlert className="w-4 h-4 text-[#291638] flex-shrink-0 mt-0.5" />
                     <span>
-                      <strong>Privacy notice:</strong> Nothing is stored or transmitted to external servers from this form. Clicking the button simply opens WhatsApp on your phone or computer with this message ready to send.
+                      <strong className="text-[#291638]">Privacy notice:</strong> Nothing is stored or transmitted to external servers from this form. Clicking the button simply opens WhatsApp on your phone or computer with this message ready to send.
                     </span>
                   </div>
                 </form>
@@ -407,14 +413,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map & Store Visit Banner (Pale Lilac Panel) */}
-      <section className="bg-[#F0E9FC]/50 py-12 border-t border-[#E6DDED]">
+      {/* Map & Store Visit Banner (Pale Lavender Panel) */}
+      <section className="bg-[#EEE6FF] py-12 border-t border-[#DCCCF7]">
         <div className="site-container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-eyebrow text-[#6546A5] block mb-1 font-semibold">
+            <span className="text-eyebrow text-[#291638] block mb-1 font-bold">
               STORE VISITS IN PUNE
             </span>
-            <h2 className="font-heading text-2xl text-[#291B35]">
+            <h2 className="font-heading text-2xl text-[#291638]">
               Finding our stall near the temple
             </h2>
             <p className="text-sm text-[#716879] mt-1 max-w-xl">
@@ -427,7 +433,7 @@ export default function ContactPage() {
             rel="noopener noreferrer"
             className="btn-primary flex-shrink-0"
           >
-            <MapPin className="w-4 h-4 text-white" />
+            <MapPin className="w-4 h-4 text-[#D5FF32]" />
             <span>Open in Google Maps</span>
           </a>
         </div>

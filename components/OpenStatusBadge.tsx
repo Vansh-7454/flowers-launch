@@ -62,15 +62,17 @@ export function OpenStatusBadge({
   if (compact) {
     return (
       <div
-        className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium border transition-colors ${
+        className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border transition-colors ${
           status.isOpen
-            ? "bg-[#667C54]/10 text-[#291B35] border-[#667C54]/30"
-            : "bg-[#E99A28]/10 text-[#291B35] border-[#E99A28]/30"
+            ? "bg-[#E9DEFF] text-[#291638] border-[#BDA0FF]/60"
+            : "bg-[#F49A24]/10 text-[#291638] border-[#F49A24]/30"
         } ${className}`}
       >
         <span
           className={`w-2 h-2 rounded-full ${
-            status.isOpen ? "bg-[#667C54]" : "bg-[#E99A28]"
+            status.isOpen
+              ? "bg-[#D5FF32] shadow-[0_0_8px_#D5FF32] ring-1 ring-[#291638]/20"
+              : "bg-[#F49A24]"
           }`}
           aria-hidden="true"
         />
@@ -81,28 +83,30 @@ export function OpenStatusBadge({
 
   return (
     <div
-      className={`inline-flex items-center gap-3.5 p-3.5 sm:px-4 sm:py-3 rounded-[12px] border ${
+      className={`inline-flex items-center gap-3.5 p-3.5 sm:px-4 sm:py-3 rounded-[14px] border ${
         status.isOpen
-          ? "bg-[#F0E9FC]/60 border-[#CDB8F4] text-[#291B35]"
-          : "bg-[#F0E9FC]/60 border-[#E99A28]/40 text-[#291B35]"
+          ? "bg-[#E9DEFF]/70 border-[#BDA0FF]/50 text-[#291638] shadow-xs"
+          : "bg-[#E9DEFF]/70 border-[#F49A24]/40 text-[#291638] shadow-xs"
       } ${className}`}
     >
       <div className="flex-shrink-0 flex items-center justify-center">
         <span
           className={`w-2.5 h-2.5 rounded-full ${
-            status.isOpen ? "bg-[#667C54]" : "bg-[#E99A28]"
+            status.isOpen
+              ? "bg-[#D5FF32] shadow-[0_0_10px_#D5FF32] ring-1 ring-[#291638]/20"
+              : "bg-[#F49A24]"
           }`}
           aria-hidden="true"
         />
       </div>
       <div>
-        <div className="text-sm font-semibold flex items-center gap-2">
+        <div className="text-sm font-bold flex items-center gap-2 text-[#291638]">
           <span>{status.text}</span>
-          <span className="text-xs font-normal text-[#716879]">
+          <span className="text-xs font-normal text-[#6E657A]">
             (5:30 AM – 9:00 PM IST)
           </span>
         </div>
-        <div className="text-xs text-[#716879] mt-0.5">{status.subtext}</div>
+        <div className="text-xs text-[#6E657A] mt-0.5">{status.subtext}</div>
       </div>
     </div>
   );
