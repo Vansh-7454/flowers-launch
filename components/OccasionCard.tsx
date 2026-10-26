@@ -35,19 +35,21 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
   return (
     <article
       id={occasion.id}
-      className={`site-card flex flex-col overflow-hidden bg-[#FCFAFF] ${
-        featured ? "border-[#B99AFF] ring-1 ring-[#B99AFF]/50" : ""
+      className={`site-card group flex flex-col overflow-hidden bg-[#FCFAFF] rounded-[20px] ${
+        featured ? "border-[#B99AFF] ring-1 ring-[#B99AFF]/50 shadow-md" : ""
       }`}
     >
-      {/* Product Photography */}
-      <div className="relative">
-        <SmartImage
-          src={occasion.image.src}
-          alt={occasion.image.alt}
-          ratio="4:3"
-          radius="none"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
+      {/* Product Photography with Subtle Hover Zoom */}
+      <div className="relative overflow-hidden rounded-t-[20px]">
+        <div className="transition-transform duration-500 ease-out group-hover:scale-105">
+          <SmartImage
+            src={occasion.image.src}
+            alt={occasion.image.alt}
+            ratio="4:3"
+            radius="none"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
 
         {/* Advance Notice Pill for Garlands in Deep Plum & Electric Chartreuse */}
         {isGarland && (
@@ -65,7 +67,7 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         {/* Category & Title */}
         <div className="flex items-start gap-3.5 mb-4">
           <div
-            className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs"
+            className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs"
             aria-hidden="true"
           >
             {renderIcon()}
@@ -82,12 +84,12 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         </div>
 
         {/* Product Description */}
-        <p className="text-[#716879] text-sm leading-relaxed mb-5">
+        <p className="text-[#746781] text-sm leading-relaxed mb-5">
           {occasion.summary}
         </p>
 
         {/* Fresh Flower Stems */}
-        <div className="mb-5 pt-4 border-t border-[#DCCCF7]">
+        <div className="mb-5 pt-4 border-t border-[#E2D5FF]">
           <span className="text-[11px] font-bold uppercase tracking-wider text-[#291638] block mb-2">
             Fresh flower elements:
           </span>
@@ -95,7 +97,7 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
             {occasion.keyFlowers.map((flower) => (
               <span
                 key={flower}
-                className="px-2.5 py-1 rounded-[8px] bg-[#F1EBFF] text-[#291638] text-xs font-medium border border-[#DCCCF7]"
+                className="px-2.5 py-1 rounded-[8px] bg-[#F1EBFF] text-[#291638] text-xs font-medium border border-[#E2D5FF]"
               >
                 {flower}
               </span>
@@ -104,7 +106,7 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         </div>
 
         {/* Timing Guideline */}
-        <div className="mt-auto mb-6 p-3 rounded-[12px] bg-[#F1EBFF] border border-[#DCCCF7] text-xs text-[#716879]">
+        <div className="mt-auto mb-6 p-3.5 rounded-[14px] bg-[#F1EBFF] border border-[#E2D5FF] text-xs text-[#746781]">
           <strong className="text-[#291638] font-bold">Timing note: </strong>
           {occasion.advanceNotice}
         </div>

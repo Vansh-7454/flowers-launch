@@ -37,7 +37,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 h-[64px] md:h-[72px] bg-[#FCFAFF]/95 backdrop-blur-md border-b border-[#DCCCF7] transition-colors">
+      <header className="sticky top-0 z-40 h-[64px] md:h-[72px] bg-[#FCFAFF]/95 backdrop-blur-md border-b border-[#E2D5FF] transition-colors">
         <div className="site-container h-full flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <div className="flex items-center gap-3">
@@ -58,7 +58,7 @@ export function Header() {
                   className={`text-[0.9375rem] font-medium py-1.5 transition-colors relative flex items-center gap-1.5 ${
                     isActive
                       ? "text-[#291638] font-bold"
-                      : "text-[#716879] hover:text-[#291638]"
+                      : "text-[#746781] hover:text-[#291638]"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -109,7 +109,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] border border-[#DCCCF7] bg-[#FCFAFF] text-[#291638]"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] border border-[#E2D5FF] bg-[#FCFAFF] text-[#291638]"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
               id="mobile-menu-toggle"
@@ -130,7 +130,7 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
-          className="fixed inset-0 top-[64px] z-50 bg-[#FCFAFF] flex flex-col p-6 border-t border-[#DCCCF7] overflow-y-auto"
+          className="fixed inset-0 top-[64px] z-50 bg-[#FCFAFF] flex flex-col p-6 border-t border-[#E2D5FF] overflow-y-auto"
         >
           <div className="mb-6">
             <OpenStatusBadge />
@@ -147,7 +147,7 @@ export function Header() {
                   className={`text-lg py-3 px-4 rounded-[12px] font-medium transition-colors ${
                     isActive
                       ? "bg-[#291638] text-white font-semibold"
-                      : "text-[#291638] bg-[#F1EBFF] border border-[#DCCCF7] hover:bg-[#D7C5FF]/30"
+                      : "text-[#291638] bg-[#F1EBFF] border border-[#E2D5FF] hover:bg-[#D7C5FF]/30"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -157,31 +157,31 @@ export function Header() {
             })}
           </nav>
 
-          <div className="mt-8 pt-6 border-t border-[#DCCCF7] flex flex-col gap-3">
+          <div className="mt-8 pt-6 border-t border-[#E2D5FF] flex flex-col gap-3">
             <a
               href={generalWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full justify-center"
             >
-              <MessageCircle className="w-5 h-5" aria-hidden="true" />
+              <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
               <span>Order on WhatsApp</span>
             </a>
             <a
               href={`tel:${siteContent.contact.phoneTel}`}
               className="btn-secondary w-full justify-center"
             >
-              <Phone className="w-5 h-5 text-[#6546A5]" aria-hidden="true" />
+              <Phone className="w-5 h-5 text-[#291638]" aria-hidden="true" />
               <span>Call Shop: {siteContent.contact.phoneDisplay}</span>
             </a>
           </div>
 
-          <div className="mt-auto pt-6 text-xs text-[#716879]">
-            <p className="font-semibold text-[#291B35]">
+          <div className="mt-auto pt-6 text-xs text-[#746781]">
+            <p className="font-semibold text-[#291638]">
               {siteContent.brand.name}
             </p>
             <p className="mt-1">{siteContent.contact.address}</p>
-            <p className="mt-1 font-medium text-[#6546A5]">
+            <p className="mt-1 font-medium text-[#291638]">
               {siteContent.contact.openingHoursDisplay} · Daily
             </p>
           </div>

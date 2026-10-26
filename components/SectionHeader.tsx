@@ -42,7 +42,7 @@ export function SectionHeader({
       {intro && (
         <p
           className={`text-intro ${
-            isDark ? "text-[#B3A8C4]" : "text-[#716879]"
+            isDark ? "text-[#B3A8C4]" : "text-[#746781]"
           }`}
         >
           {intro}

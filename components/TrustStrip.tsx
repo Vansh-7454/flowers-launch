@@ -11,7 +11,7 @@ export function TrustStrip() {
   ];
 
   return (
-    <div className="w-full bg-[#F1EBFF] border-y border-[#DCCCF7] py-5">
+    <div className="w-full bg-[#F1EBFF] border-y border-[#E2D5FF] py-5">
       <div className="site-container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {siteContent.trustStrip.map((item, index) => (
@@ -19,7 +19,7 @@ export function TrustStrip() {
               key={item}
               className="flex items-center gap-3 text-sm font-semibold text-[#291638]"
             >
-              <div className="w-8 h-8 rounded-full bg-[#FCFAFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+              <div className="w-8 h-8 rounded-full bg-[#FCFAFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
                 {icons[index % icons.length]}
               </div>
               <span className="leading-snug">{item}</span>

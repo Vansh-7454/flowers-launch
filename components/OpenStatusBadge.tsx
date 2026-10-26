@@ -102,11 +102,11 @@ export function OpenStatusBadge({
       <div>
         <div className="text-sm font-bold flex items-center gap-2 text-[#291638]">
           <span>{status.text}</span>
-          <span className="text-xs font-normal text-[#6E657A]">
+          <span className="text-xs font-normal text-[#746781]">
             (5:30 AM – 9:00 PM IST)
           </span>
         </div>
-        <div className="text-xs text-[#6E657A] mt-0.5">{status.subtext}</div>
+        <div className="text-xs text-[#746781] mt-0.5">{status.subtext}</div>
       </div>
     </div>
   );

@@ -15,21 +15,20 @@ export const designTokens = {
     chartreuse: "#D5FF32",      // Chartreuse Green - interactive highlights & accents
     leafGreen: "#7DA34A",       // Leaf Green - natural foliage, open badge
     softWhite: "#FCFAFF",       // Soft White - card surfaces, clean content
+    borderLavender: "#E2D5FF",  // Border Lavender
+    mutedText: "#746781",       // Muted supportive text
     
     // Floral accents
     marigold: "#F49A24",        // Marigold Accent
     rose: "#D93476",            // Rose Accent
     jasmine: "#FFF9EE",         // Jasmine White
 
-    // Text & borders
-    mutedText: "#716879",       // Muted supportive text
-    border: "#DCCCF7",          // Editorial borders & dividers
-    lavenderBorder: "#DCCCF7",  // Subtle lavender border
-
-    // Compatibility aliases
+    // Text & borders compatibility aliases
+    border: "#E2D5FF",          // Editorial borders & dividers
+    lavenderBorder: "#E2D5FF",  // Subtle lavender border
+    subtleBorder: "#E2D5FF",
     lavender: "#B99AFF",
     freshLeafGreen: "#7DA34A",
-    subtleBorder: "#DCCCF7",
   },
 
   typography: {
@@ -56,8 +55,8 @@ export const designTokens = {
   },
 
   radii: {
-    button: "11px",
-    card: "18px",
+    button: "12px",
+    card: "20px",
     visual: "24px",
     pill: "9999px",
   },
@@ -73,15 +72,15 @@ export const designTokens = {
   shadows: {
     softCard: "0 2px 10px -2px rgba(41, 22, 56, 0.04), 0 8px 24px -4px rgba(41, 22, 56, 0.06)",
     elevated: "0 16px 40px -8px rgba(41, 22, 56, 0.12)",
-    hoverLift: "0 14px 28px -4px rgba(189, 160, 255, 0.25)",
+    hoverLift: "0 14px 28px -4px rgba(185, 154, 255, 0.28)",
     chartreuseGlow: "0 0 24px -2px rgba(213, 255, 50, 0.45)",
-    lavenderGlow: "0 12px 36px -6px rgba(189, 160, 255, 0.35)",
+    lavenderGlow: "0 12px 36px -6px rgba(185, 154, 255, 0.35)",
   },
 
   transitions: {
-    default: "all 200ms cubic-bezier(0.16, 1, 0.3, 1)",
-    button: "all 180ms ease",
-    lift: "transform 220ms ease, box-shadow 220ms ease",
+    default: "all 300ms cubic-bezier(0.16, 1, 0.3, 1)",
+    button: "all 200ms ease",
+    lift: "transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease",
   },
 } as const;
 

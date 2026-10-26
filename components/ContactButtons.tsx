@@ -19,19 +19,19 @@ export function ContactButtons({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 rounded-[11px] bg-[#D5FF32] text-[#291638] font-bold text-base border border-[#C4ED20] hover:bg-[#C5F220] shadow-[0_4px_16px_-2px_rgba(213,255,50,0.35)] transition-all cursor-pointer flex-1 sm:flex-initial"
+        className="btn-primary flex-1 sm:flex-initial"
         id="contact-whatsapp-btn"
       >
-        <MessageCircle className="w-5 h-5 text-[#291638]" aria-hidden="true" />
+        <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
         <span>Order on WhatsApp</span>
       </a>
 
       <a
         href={`tel:${siteContent.contact.phoneTel}`}
-        className="btn-primary flex-1 sm:flex-initial"
+        className="btn-secondary flex-1 sm:flex-initial"
         id="contact-call-btn"
       >
-        <Phone className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
+        <Phone className="w-5 h-5 text-[#291638]" aria-hidden="true" />
         <span>Call Shop</span>
       </a>
 

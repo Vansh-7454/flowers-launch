@@ -21,11 +21,11 @@ export default function FlowersAndOccasionsPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Compact Editorial Page Header */}
-      <section className="bg-gradient-to-b from-[#F1EBFF] via-[#F1EBFF]/50 to-[#FCFAFF] border-b border-[#DCCCF7] py-12 md:py-16">
+      <section className="bg-gradient-to-b from-[#F1EBFF] via-[#F1EBFF]/50 to-[#FCFAFF] border-b border-[#E2D5FF] py-12 md:py-16">
         <div className="site-container">
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-2 text-xs text-[#716879]">
+            <ol className="flex items-center gap-2 text-xs text-[#746781]">
               <li>
                 <Link href="/" className="hover:text-[#291638] transition-colors">
                   Home
@@ -49,7 +49,7 @@ export default function FlowersAndOccasionsPage() {
           <h1 className="text-h1 font-heading text-[#291638] mb-3">
             Flowers for every temple ritual & celebration
           </h1>
-          <p className="text-intro text-[#716879]">
+          <p className="text-intro text-[#746781]">
             From dawn pooja offerings to royal wedding varmala, each arrangement is hand-selected and crafted with authentic care.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function FlowersAndOccasionsPage() {
       </section>
 
       {/* Operational Protocol Section (Pale Lavender Panel) */}
-      <section className="site-section bg-[#F1EBFF] border-y border-[#DCCCF7]">
+      <section className="site-section bg-[#F1EBFF] border-y border-[#E2D5FF]">
         <div className="site-container">
           <div className="max-w-[760px] mx-auto text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-2">
@@ -106,7 +106,7 @@ export default function FlowersAndOccasionsPage() {
             <h2 className="text-h2 font-heading text-[#291638] mb-4">
               Daily fresh stock & clear advance planning
             </h2>
-            <p className="text-intro text-[#716879] mx-auto">
+            <p className="text-intro text-[#746781] mx-auto">
               Because our blooms are sourced fresh every morning, here is what you can expect when ordering with us.
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function FlowersAndOccasionsPage() {
               <h3 className="font-heading text-xl text-[#291638] mb-2 font-bold">
                 Daily Temple Flowers
               </h3>
-              <p className="text-sm text-[#716879] leading-relaxed">
+              <p className="text-sm text-[#746781] leading-relaxed">
                 Loose marigolds, red hibiscus, durva grass, and mogra strings arrive fresh at 5:00 AM daily. Available for immediate walk-in purchase from 5:30 AM or reserved via WhatsApp.
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function FlowersAndOccasionsPage() {
               <h3 className="font-heading text-xl text-[#291638] mb-2 font-bold">
                 1-Day Advance Garlands
               </h3>
-              <p className="text-sm text-[#716879] leading-relaxed">
+              <p className="text-sm text-[#746781] leading-relaxed">
                 Ceremonial wedding varmala, reception sets, and car decorations need hand-weaving. Please place your order at least 24 hours prior so we can procure stems at the dawn wholesale mandi.
               </p>
             </div>
@@ -143,7 +143,7 @@ export default function FlowersAndOccasionsPage() {
               <h3 className="font-heading text-xl text-[#291638] mb-2 font-bold">
                 Pickup & Payment
               </h3>
-              <p className="text-sm text-[#716879] leading-relaxed">
+              <p className="text-sm text-[#746781] leading-relaxed">
                 No complex forms or online carts. Your order is confirmed in writing on WhatsApp, carefully wrapped, and paid for (Cash or UPI) when collected at our shop counter.
               </p>
             </div>

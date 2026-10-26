@@ -125,7 +125,7 @@ export function Logo({
         <span className="font-heading text-[18px] md:text-[20px] font-bold tracking-tight text-[#291638]">
           {siteContent.brand.name}
         </span>
-        <span className="text-[10px] md:text-[11px] uppercase tracking-[0.16em] font-semibold text-[#6E657A] mt-1">
+        <span className="text-[10px] md:text-[11px] uppercase tracking-[0.16em] font-semibold text-[#746781] mt-1">
           {siteContent.brand.tradeSubtitle}
         </span>
       </div>

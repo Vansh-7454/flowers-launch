@@ -18,7 +18,7 @@ export default function NotFound() {
         <h1 className="text-h1 font-heading text-[#291638] mb-4">
           This flower pathway is missing
         </h1>
-        <p className="text-intro text-[#6E657A] mb-8">
+        <p className="text-intro text-[#746781] mb-8">
           The page you are looking for doesn’t exist or may have been moved. Return to our home page to browse our fresh temple flowers and garlands.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

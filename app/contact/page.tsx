@@ -94,10 +94,10 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Compact Page Header */}
-      <section className="bg-gradient-to-b from-[#F1EBFF] via-[#F1EBFF]/50 to-[#FCFAFF] border-b border-[#DCCCF7] py-12 md:py-16">
+      <section className="bg-gradient-to-b from-[#F1EBFF] via-[#F1EBFF]/50 to-[#FCFAFF] border-b border-[#E2D5FF] py-12 md:py-16">
         <div className="site-container">
           <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-2 text-xs text-[#716879]">
+            <ol className="flex items-center gap-2 text-xs text-[#746781]">
               <li>
                 <Link href="/" className="hover:text-[#291638] transition-colors">
                   Home
@@ -121,7 +121,7 @@ export default function ContactPage() {
           <h1 className="text-h1 font-heading text-[#291638] mb-3">
             Contact our shop & visit in Pune
           </h1>
-          <p className="text-intro text-[#716879]">
+          <p className="text-intro text-[#746781]">
             We are open early from 5:30 AM for morning temple poojas. Message us on WhatsApp or call before you visit.
           </p>
         </div>
@@ -133,9 +133,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left Column: 6 cols — Contact Info Card & Action Buttons */}
             <div className="lg:col-span-6 space-y-8">
-              <div className="site-card p-6 md:p-8 space-y-6 bg-[#FCFAFF]">
+              <div className="site-card-info p-6 md:p-8 space-y-6 bg-[#FCFAFF]">
                 {/* Live Status Header */}
-                <div className="flex items-center justify-between pb-6 border-b border-[#DCCCF7]">
+                <div className="flex items-center justify-between pb-6 border-b border-[#E2D5FF]">
                   <div>
                     <span className="text-xs uppercase tracking-wider font-bold text-[#291638] block">
                       CURRENT SHOP STATUS
@@ -151,14 +151,14 @@ export default function ContactPage() {
                 <div className="space-y-5 text-sm md:text-base">
                   {/* Address */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
                       <MapPin className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
                       <strong className="text-[#291638] block font-bold mb-0.5">
                         Shop Address:
                       </strong>
-                      <p className="text-[#716879] leading-relaxed">
+                      <p className="text-[#746781] leading-relaxed">
                         {siteContent.contact.address}
                       </p>
                     </div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
                       <Phone className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -184,14 +184,14 @@ export default function ContactPage() {
 
                   {/* WhatsApp */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
                       <MessageCircle className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
                       <strong className="text-[#291638] block font-bold mb-0.5">
                         WhatsApp Enquiries & Orders:
                       </strong>
-                      <p className="text-[#716879] text-sm mb-1 font-medium">
+                      <p className="text-[#746781] text-sm mb-1 font-medium">
                         {siteContent.contact.whatsappDisplay}
                       </p>
                       <span className="text-xs text-[#F49A24] font-bold">
@@ -202,7 +202,7 @@ export default function ContactPage() {
 
                   {/* Operating Hours */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
                       <Clock className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                       <p className="text-[#291638] font-semibold">
                         {siteContent.contact.openingHoursDisplay} · Daily
                       </p>
-                      <p className="text-xs text-[#716879] mt-1">
+                      <p className="text-xs text-[#746781] mt-1">
                         {siteContent.contact.morningNote}
                       </p>
                     </div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Important Pickup Policy Box */}
-                <div className="p-4 rounded-[14px] bg-[#F1EBFF] border border-[#DCCCF7] text-xs text-[#716879] space-y-1">
+                <div className="p-4 rounded-[14px] bg-[#F1EBFF] border border-[#E2D5FF] text-xs text-[#746781] space-y-1">
                   <div className="font-bold text-[#291638] flex items-center gap-1.5">
                     <span>Payment Policy:</span>
                   </div>
@@ -234,7 +234,7 @@ export default function ContactPage() {
               </div>
 
               {/* Shopfront Atmosphere Photo */}
-              <div className="shadow-md rounded-[20px] overflow-hidden border border-[#DCCCF7]">
+              <div className="shadow-md rounded-[20px] overflow-hidden border border-[#E2D5FF]">
                 <SmartImage
                   src="/images/contact/shop-front.webp"
                   alt="Atmospheric entrance of Shree Ganesh Flowers stall near the temple in Pune"
@@ -257,7 +257,7 @@ export default function ContactPage() {
                 <h2 className="font-heading text-2xl text-[#291638] mb-2 font-bold">
                   Prepare your order message
                 </h2>
-                <p className="text-sm text-[#716879] mb-6 leading-relaxed">
+                <p className="text-sm text-[#746781] mb-6 leading-relaxed">
                   Fill in your details to create a clear message that opens directly in WhatsApp. You will review and send it yourself.
                 </p>
 
@@ -278,8 +278,8 @@ export default function ContactPage() {
                       onChange={handleInputChange}
                       placeholder="e.g. Ramesh Joshi"
                       className={`w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
-                        errors.name ? "border-red-500" : "border-[#DCCCF7]"
-                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]`}
+                        errors.name ? "border-red-500" : "border-[#E2D5FF]"
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]`}
                       required
                     />
                     {errors.name && (
@@ -306,8 +306,8 @@ export default function ContactPage() {
                       onChange={handleInputChange}
                       placeholder="e.g. 98220 12345"
                       className={`w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
-                        errors.phone ? "border-red-500" : "border-[#DCCCF7]"
-                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]`}
+                        errors.phone ? "border-red-500" : "border-[#E2D5FF]"
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]`}
                       required
                     />
                     {errors.phone && (
@@ -330,7 +330,7 @@ export default function ContactPage() {
                       name="occasion"
                       value={formData.occasion}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#DCCCF7] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]"
+                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#E2D5FF] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]"
                     >
                       <option value="Pooja Flowers">Daily Pooja Flowers (Loose marigolds, durva, hibiscus)</option>
                       <option value="Wedding Garlands">Wedding Garlands (Varmala) — 1 day in advance</option>
@@ -354,7 +354,7 @@ export default function ContactPage() {
                       name="pickupTime"
                       value={formData.pickupTime}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#DCCCF7] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]"
+                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#E2D5FF] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]"
                     >
                       <option value="Early Dawn (5:30 AM - 7:00 AM)">Early Dawn (5:30 AM – 7:00 AM) · Pre-darshan</option>
                       <option value="Morning (7:00 AM - 11:00 AM)">Morning (7:00 AM – 11:00 AM)</option>
@@ -379,8 +379,8 @@ export default function ContactPage() {
                       onChange={handleInputChange}
                       placeholder="e.g. Need 2 varmala sets in red rose petals, pickup tomorrow at 7 AM"
                       className={`w-full p-4 rounded-[12px] bg-[#FCFAFF] border ${
-                        errors.message ? "border-red-500" : "border-[#DCCCF7]"
-                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF]`}
+                        errors.message ? "border-red-500" : "border-[#E2D5FF]"
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]`}
                     />
                     {errors.message && (
                       <p className="text-xs text-red-600 mt-1 font-medium">
@@ -389,18 +389,18 @@ export default function ContactPage() {
                     )}
                   </div>
 
-                  {/* Submit Action: High-Contrast Chartreuse Button */}
+                  {/* Submit Action: Unified Primary Button */}
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center gap-2 min-h-[48px] w-full px-6 rounded-[12px] bg-[#D5FF32] text-[#291638] font-bold text-sm border border-[#C4ED20] hover:bg-[#C5F220] shadow-[0_4px_16px_-2px_rgba(213,255,50,0.4)] transition-all cursor-pointer"
+                    className="btn-primary w-full justify-center"
                     id="submit-enquiry-btn"
                   >
-                    <Send className="w-4 h-4 text-[#291638]" />
+                    <Send className="w-4 h-4 text-[#D5FF32]" />
                     <span>Open Message in WhatsApp</span>
                   </button>
 
                   {/* Privacy Notice */}
-                  <div className="p-3.5 rounded-[12px] bg-[#F1EBFF] border border-[#DCCCF7] text-[11px] text-[#716879] flex items-start gap-2">
+                  <div className="p-3.5 rounded-[12px] bg-[#F1EBFF] border border-[#E2D5FF] text-[11px] text-[#746781] flex items-start gap-2">
                     <ShieldAlert className="w-4 h-4 text-[#291638] flex-shrink-0 mt-0.5" />
                     <span>
                       <strong className="text-[#291638]">Privacy notice:</strong> Nothing is stored or transmitted to external servers from this form. Clicking the button simply opens WhatsApp on your phone or computer with this message ready to send.
@@ -414,7 +414,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map & Store Visit Banner (Pale Lavender Panel) */}
-      <section className="bg-[#F1EBFF] py-12 border-t border-[#DCCCF7]">
+      <section className="bg-[#F1EBFF] py-12 border-t border-[#E2D5FF]">
         <div className="site-container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <span className="text-eyebrow text-[#291638] block mb-1 font-bold">
@@ -423,7 +423,7 @@ export default function ContactPage() {
             <h2 className="font-heading text-2xl text-[#291638]">
               Finding our stall near the temple
             </h2>
-            <p className="text-sm text-[#716879] mt-1 max-w-xl">
+            <p className="text-sm text-[#746781] mt-1 max-w-xl">
               We are located directly along the main temple approach road in Pune [ADD EXACT TEMPLE & STREET ADDRESS]. Look for our fresh marigold baskets and garland displays.
             </p>
           </div>

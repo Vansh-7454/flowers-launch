@@ -52,7 +52,7 @@ export function CTASection({
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 min-h-[48px] px-8 rounded-[12px] bg-[#D5FF32] text-[#291638] font-bold text-base border border-[#C4ED20] hover:bg-[#C5F220] shadow-[0_4px_16px_-2px_rgba(213,255,50,0.4)] hover:shadow-[0_8px_24px_-2px_rgba(213,255,50,0.6)] transition-all cursor-pointer w-full sm:w-auto"
+            className="btn-accent w-full sm:w-auto px-8"
             id="cta-whatsapp-btn"
           >
             <MessageCircle className="w-5 h-5 text-[#291638]" aria-hidden="true" />
@@ -60,7 +60,7 @@ export function CTASection({
           </a>
           <a
             href={`tel:${siteContent.contact.phoneTel}`}
-            className="btn-secondary w-full sm:w-auto px-7 bg-[#FCFAFF] text-[#291638] border-[#DCCCF7] hover:bg-[#F1EBFF]"
+            className="btn-secondary w-full sm:w-auto px-7"
             id="cta-call-btn"
           >
             <Phone className="w-5 h-5 text-[#291638]" aria-hidden="true" />

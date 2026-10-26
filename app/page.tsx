@@ -21,7 +21,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. HERO SECTION (Full-Width Uninterrupted Lavender 3D Editorial Canvas) */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#D7C5FF] via-[#CFB7FA] to-[#C4A3F7] pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 border-b border-[#DCCCF7]">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#D7C5FF] via-[#CFB7FA] to-[#C4A3F7] pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 border-b border-[#E2D5FF]">
         {/* Ambient atmospheric studio lighting highlight */}
         <div
           className="absolute -top-32 right-1/4 w-[650px] h-[650px] rounded-full bg-[#FFFFFF]/40 blur-3xl pointer-events-none"
@@ -37,7 +37,7 @@ export default function HomePage() {
             {/* Left Column: ~44% Editorial Typography & Direct Actions */}
             <div className="lg:col-span-5 flex flex-col items-start z-10 animate-hero-fade-up">
               {/* Eyebrow Label with Electric Chartreuse Orb */}
-              <div className="inline-flex items-center gap-2.5 mb-5 px-3.5 py-1.5 rounded-full bg-[#F1EBFF] border border-[#DCCCF7] text-[#291638] shadow-xs">
+              <div className="inline-flex items-center gap-2.5 mb-5 px-3.5 py-1.5 rounded-full bg-[#F1EBFF] border border-[#E2D5FF] text-[#291638] shadow-xs">
                 <span
                   className="w-2.5 h-2.5 rounded-full bg-[#D5FF32] shadow-[0_0_10px_#D5FF32]"
                   aria-hidden="true"
@@ -45,7 +45,7 @@ export default function HomePage() {
                 <span className="text-[11px] font-bold uppercase tracking-[0.16em]">
                   Fresh Flowers & Handcrafted Garlands
                 </span>
-                <span className="text-xs text-[#716879] hidden sm:inline">
+                <span className="text-xs text-[#746781] hidden sm:inline">
                   · Pune Temple Precinct
                 </span>
               </div>
@@ -68,7 +68,7 @@ export default function HomePage() {
                   href={heroWhatsAppUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 rounded-[12px] bg-[#291638] text-white font-bold text-base border border-[#291638] hover:bg-[#3D2252] shadow-[0_4px_16px_-2px_rgba(41,22,56,0.35)] hover:shadow-[0_8px_24px_-2px_rgba(41,22,56,0.5)] hover:-translate-y-0.5 transition-all cursor-pointer group"
+                  className="btn-primary min-h-[48px] px-6 text-base group"
                   id="hero-whatsapp-btn"
                 >
                   <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
@@ -76,7 +76,7 @@ export default function HomePage() {
                 </a>
                 <Link
                   href="/flowers-and-occasions"
-                  className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 rounded-[12px] bg-[#FCFAFF]/80 hover:bg-[#FCFAFF] text-[#291638] font-semibold text-base border border-[#291638]/20 backdrop-blur-xs transition-all hover:-translate-y-0.5 shadow-xs"
+                  className="btn-secondary min-h-[48px] px-5 text-base"
                   id="hero-occasions-btn"
                 >
                   <span>Browse All Occasions</span>
@@ -172,7 +172,7 @@ export default function HomePage() {
       <TrustStrip />
 
       {/* 3. EARLY MORNING ROUTINE BANNER (Pale Lavender Panel) */}
-      <section className="bg-[#F1EBFF] py-12 border-b border-[#DCCCF7]">
+      <section className="bg-[#F1EBFF] py-12 border-b border-[#E2D5FF]">
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <div className="md:col-span-1">
@@ -183,7 +183,7 @@ export default function HomePage() {
                 Opening daily at 5:30 AM
               </h2>
             </div>
-            <div className="md:col-span-2 text-[#716879] text-sm md:text-base leading-relaxed">
+            <div className="md:col-span-2 text-[#746781] text-sm md:text-base leading-relaxed">
               We open before sunrise so devotees and families visiting the temple can collect crisp, freshly picked marigolds, durva grass, and fragrant mogra strings. Simply walk in or drop a WhatsApp message to reserve your morning pooja pack.
             </div>
           </div>
@@ -218,12 +218,12 @@ export default function HomePage() {
       </section>
 
       {/* 5. ADVANCE NOTICE FEATURE SPLIT (Pale Lavender Panel with Chartreuse Accents) */}
-      <section className="site-section bg-[#F1EBFF] border-y border-[#DCCCF7]">
+      <section className="site-section bg-[#F1EBFF] border-y border-[#E2D5FF]">
         <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Visual on left */}
             <div className="lg:col-span-5 order-2 lg:order-1">
-              <div className="relative shadow-md rounded-[20px] overflow-hidden border border-[#DCCCF7]">
+              <div className="relative shadow-md rounded-[20px] overflow-hidden border border-[#E2D5FF]">
                 <SmartImage
                   src="/images/home/about-florist.webp"
                   alt="Artisan florist weaving fresh jasmine and marigold garlands in Pune"
@@ -242,10 +242,10 @@ export default function HomePage() {
               <h2 className="text-h2 font-heading text-[#291638] mb-4">
                 Order garlands one day in advance
               </h2>
-              <p className="text-intro text-[#716879] mb-4">
+              <p className="text-intro text-[#746781] mb-4">
                 Ceremonial wedding varmala, car decorations, and custom altar garlands require hand-woven precision and carefully sorted bloom stems.
               </p>
-              <p className="text-sm md:text-base text-[#716879] mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-[#746781] mb-6 leading-relaxed">
                 By notifying us one day prior on WhatsApp, our master garland weaver reserves the freshest batch of rose petals, jasmine, and tuberose at the wholesale morning mandi, crafting your garlands exactly to your preferred length and color balance.
               </p>
 
@@ -295,13 +295,13 @@ export default function HomePage() {
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-7 space-y-4 text-base text-[#716879] leading-relaxed">
+            <div className="lg:col-span-7 space-y-4 text-base text-[#746781] leading-relaxed">
               {siteContent.aboutContent.paragraphs.map((p, idx) => (
                 <p key={idx}>{p}</p>
               ))}
 
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 rounded-[16px] bg-[#FCFAFF] border border-[#DCCCF7] shadow-xs">
+                <div className="p-4 rounded-[20px] bg-[#FCFAFF] border border-[#E2D5FF] shadow-xs">
                   <span className="text-xs uppercase tracking-wider font-semibold text-[#291638] block mb-1">
                     Pickup Location
                   </span>
@@ -309,7 +309,7 @@ export default function HomePage() {
                     {siteContent.contact.address}
                   </p>
                 </div>
-                <div className="p-4 rounded-[16px] bg-[#FCFAFF] border border-[#DCCCF7] shadow-xs">
+                <div className="p-4 rounded-[20px] bg-[#FCFAFF] border border-[#E2D5FF] shadow-xs">
                   <span className="text-xs uppercase tracking-wider font-semibold text-[#291638] block mb-1">
                     Payment Method
                   </span>
@@ -331,7 +331,7 @@ export default function HomePage() {
                 <h3 className="font-heading text-xl text-[#291638]">
                   Simple, direct & reliable
                 </h3>
-                <ol className="space-y-4 text-sm text-[#716879] pt-2">
+                <ol className="space-y-4 text-sm text-[#746781] pt-2">
                   <li className="flex gap-3">
                     <span className="w-6 h-6 rounded-full bg-[#291638] text-[#D5FF32] flex items-center justify-center font-bold text-xs flex-shrink-0">
                       1
@@ -363,7 +363,7 @@ export default function HomePage() {
       </section>
 
       {/* 7. TEMPLE FLOWER CARE GUIDE */}
-      <section className="site-section bg-[#F1EBFF] border-t border-[#DCCCF7]">
+      <section className="site-section bg-[#F1EBFF] border-t border-[#E2D5FF]">
         <div className="site-container">
           <SectionHeader
             eyebrow="FLORAL CARE TIPS"
@@ -377,13 +377,13 @@ export default function HomePage() {
                 key={idx}
                 className="site-card p-6 md:p-8 flex flex-col bg-[#FCFAFF]"
               >
-                <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] text-[#291638] flex items-center justify-center font-bold text-sm mb-4 border border-[#DCCCF7]">
+                <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] text-[#291638] flex items-center justify-center font-bold text-sm mb-4 border border-[#E2D5FF]">
                   0{idx + 1}
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-[#291638] mb-2">
                   {guide.title}
                 </h3>
-                <p className="text-sm text-[#716879] leading-relaxed">
+                <p className="text-sm text-[#746781] leading-relaxed">
                   {guide.description}
                 </p>
               </div>
@@ -413,7 +413,7 @@ export default function HomePage() {
                     ↓
                   </span>
                 </summary>
-                <p className="mt-4 text-sm md:text-base text-[#716879] leading-relaxed pt-3 border-t border-[#DCCCF7]">
+                <p className="mt-4 text-sm md:text-base text-[#746781] leading-relaxed pt-3 border-t border-[#E2D5FF]">
                   {faq.answer}
                 </p>
               </details>
