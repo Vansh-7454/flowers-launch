@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, ArrowRight, Check, Sparkles, Flower2, Clock, MapPin, Wallet } from "lucide-react";
+import { MessageCircle, ArrowRight, Check, Sparkles, Flower2, Clock } from "lucide-react";
 import { siteContent, getWhatsAppUrl } from "@/content/site";
 import { SmartImage } from "@/components/SmartImage";
 import { TrustStrip } from "@/components/TrustStrip";
@@ -382,120 +382,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. ABOUT SHREE GANESH FLOWERS (Story & 3-Step Ordering) */}
+      {/* 6. TEMPLE FLOWER CARE GUIDE */}
       <section className="site-section bg-[#FCFAFF]">
-        <div className="site-container">
-          <SectionHeader
-            eyebrow="TEMPLE-SIDE TRADITION IN PUNE"
-            heading={siteContent.aboutContent.heading}
-            intro="A neighborhood flower stall committed to fresh morning blooms and honest service."
-          />
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            {/* Left Story Column */}
-            <div className="lg:col-span-7 flex flex-col justify-between">
-              <div className="mb-8">
-                <p className="text-lg md:text-xl text-[#291638] font-medium leading-relaxed mb-4">
-                  {siteContent.aboutContent.paragraphs[0]}
-                </p>
-                <div className="space-y-3.5 text-sm md:text-base text-[#746781] leading-relaxed">
-                  <p>{siteContent.aboutContent.paragraphs[1]}</p>
-                  <p>{siteContent.aboutContent.paragraphs[2]}</p>
-                </div>
-              </div>
-
-              {/* Specification Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-5 rounded-[20px] bg-[#FCFAFF] border border-[#E2D5FF] shadow-xs hover:border-[#B99AFF] hover:shadow-sm transition-all flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] border border-[#E2D5FF] flex items-center justify-center text-[#291638] flex-shrink-0 mt-0.5 shadow-2xs">
-                    <MapPin className="w-5 h-5 text-[#291638]" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] uppercase tracking-wider font-bold text-[#291638] block mb-1">
-                      Pickup Location
-                    </span>
-                    <p className="text-sm font-medium text-[#746781] leading-snug">
-                      {siteContent.contact.address}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-5 rounded-[20px] bg-[#FCFAFF] border border-[#E2D5FF] shadow-xs hover:border-[#B99AFF] hover:shadow-sm transition-all flex items-start gap-3.5">
-                  <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] border border-[#E2D5FF] flex items-center justify-center text-[#291638] flex-shrink-0 mt-0.5 shadow-2xs">
-                    <Wallet className="w-5 h-5 text-[#291638]" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] uppercase tracking-wider font-bold text-[#291638] block mb-1">
-                      Payment Method
-                    </span>
-                    <p className="text-sm font-medium text-[#746781] leading-snug">
-                      Paid upon pickup at counter (Cash & UPI)
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Ordering Card */}
-            <div className="lg:col-span-5">
-              <div className="site-card-info p-7 sm:p-8 md:p-9 space-y-6 bg-gradient-to-b from-[#FCFAFF] via-[#FCFAFF] to-[#F8F5FF] rounded-[24px] border border-[#E2D5FF] shadow-[0_12px_36px_rgba(185,154,255,0.14)]">
-                <div>
-                  <div className="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-[#F1EBFF] border border-[#E2D5FF]">
-                    <span className="w-2 h-2 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]" />
-                    <span className="text-[11px] uppercase tracking-[0.14em] font-bold text-[#291638]">
-                      HOW ORDERING WORKS
-                    </span>
-                  </div>
-                  <h3 className="font-heading text-2xl sm:text-[26px] text-[#291638] font-bold mt-1">
-                    Simple, direct & reliable
-                  </h3>
-                </div>
-
-                <div className="space-y-3 pt-1">
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-[16px] bg-[#FCFAFF] border border-[#E2D5FF]/80 transition-all hover:border-[#B99AFF] hover:shadow-2xs">
-                    <span className="w-7 h-7 rounded-full bg-[#291638] text-[#D5FF32] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5 shadow-xs">
-                      1
-                    </span>
-                    <span className="text-sm text-[#291638] leading-snug font-medium">
-                      Browse our occasion types online or enquire about daily loose flower stock.
-                    </span>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-[16px] bg-[#FCFAFF] border border-[#E2D5FF]/80 transition-all hover:border-[#B99AFF] hover:shadow-2xs">
-                    <span className="w-7 h-7 rounded-full bg-[#291638] text-[#D5FF32] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5 shadow-xs">
-                      2
-                    </span>
-                    <span className="text-sm text-[#291638] leading-snug font-medium">
-                      Click WhatsApp to confirm your preferred occasion and pickup time.
-                    </span>
-                  </div>
-
-                  <div className="flex items-start gap-3.5 p-3.5 rounded-[16px] bg-[#FCFAFF] border border-[#E2D5FF]/80 transition-all hover:border-[#B99AFF] hover:shadow-2xs">
-                    <span className="w-7 h-7 rounded-full bg-[#291638] text-[#D5FF32] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5 shadow-xs">
-                      3
-                    </span>
-                    <span className="text-sm text-[#291638] leading-snug font-medium">
-                      Collect your fresh flowers directly at our shop counter and settle payment.
-                    </span>
-                  </div>
-                </div>
-
-                <div className="pt-2">
-                  <Link href="/contact" className="btn-secondary w-full justify-between group pl-6 pr-2.5" id="about-contact-btn">
-                    <span>View shop location & map</span>
-                    <span className="btn-side-badge">
-                      <ArrowRight className="w-4 h-4 text-[#291638]" />
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. TEMPLE FLOWER CARE GUIDE */}
-      <section className="site-section bg-[#F1EBFF] border-t border-[#E2D5FF]">
         <div className="site-container">
           <SectionHeader
             eyebrow="FLORAL CARE TIPS"
@@ -507,7 +395,7 @@ export default function HomePage() {
             {siteContent.flowerCareGuide.map((guide, idx) => (
               <div
                 key={idx}
-                className="site-card group p-7 md:p-8 flex flex-col bg-[#FCFAFF] rounded-[22px] border border-[#E2D5FF] transition-all duration-300 hover:-translate-y-1 hover:border-[#B99AFF] hover:shadow-[0_16px_36px_-6px_rgba(185,154,255,0.25)] relative overflow-hidden"
+                className="site-card group p-7 md:p-8 flex flex-col bg-[#F8F5FF] rounded-[22px] border border-[#E2D5FF] transition-all duration-300 hover:-translate-y-1 hover:border-[#B99AFF] hover:shadow-[0_16px_36px_-6px_rgba(185,154,255,0.25)] relative overflow-hidden"
               >
                 <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] text-[#291638] group-hover:bg-[#291638] group-hover:text-[#D5FF32] flex items-center justify-center font-heading text-lg font-bold mb-5 border border-[#E2D5FF] transition-colors shadow-xs">
                   0{idx + 1}
@@ -524,16 +412,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 8. FAQ ACCORDION PREVIEW */}
-      <section className="site-section bg-[#FCFAFF]">
+      {/* 7. FAQ ACCORDION PREVIEW (Centered Common Questions) */}
+      <section className="site-section bg-[#F1EBFF] border-t border-[#E2D5FF]">
         <div className="site-container">
           <SectionHeader
             eyebrow="COMMON QUESTIONS"
             heading="Ordering, morning hours & pickup details"
             intro="Everything you need to know about purchasing daily flowers and reserving advance garlands."
+            align="center"
           />
 
-          <div className="max-w-[800px] space-y-4">
+          <div className="max-w-[800px] mx-auto space-y-4">
             {siteContent.faqs.slice(0, 4).map((faq, idx) => (
               <details
                 key={idx}
