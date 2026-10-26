@@ -18,7 +18,6 @@ import { ContactButtons } from "@/components/ContactButtons";
 import { CTASection } from "@/components/CTASection";
 
 export default function ContactPage() {
-  // Form State for WhatsApp Message Composer
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -34,7 +33,6 @@ export default function ContactPage() {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error for field on change
     if (errors[name]) {
       setErrors((prev) => {
         const updated = { ...prev };
@@ -57,7 +55,6 @@ export default function ContactPage() {
     }
 
     // Validate Phone (Indian 10-digit format starting with 6, 7, 8, 9)
-    // Strip spaces, dashes, brackets, leading +91 or 0
     let cleanPhone = formData.phone.trim().replace(/[\s\-\(\)]/g, "");
     if (cleanPhone.startsWith("+91")) {
       cleanPhone = cleanPhone.slice(3);
@@ -77,7 +74,6 @@ export default function ContactPage() {
       newErrors.phone = "Please enter a valid personal mobile number.";
     }
 
-    // Validate Message length (up to 1000 chars)
     if (formData.message && formData.message.length > 1000) {
       newErrors.message = "Message cannot exceed 1000 characters.";
     }
@@ -87,7 +83,6 @@ export default function ContactPage() {
       return;
     }
 
-    // Format message and redirect directly to WhatsApp
     const compiledMessage = `Hi Shree Ganesh Flowers,\n\nI would like to place an enquiry:\n- Name: ${trimmedName}\n- Phone: ${cleanPhone}\n- Occasion: ${formData.occasion}\n- Pickup Slot: ${formData.pickupTime}\n${
       formData.message.trim() ? `- Notes: ${formData.message.trim()}\n` : ""
     }\nPlease confirm availability and total amount to pay at pickup.`;
@@ -98,51 +93,51 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* Compact Page Header (Rule 9) */}
-      <section className="bg-[#F5EFE6] border-b border-[#E3D7C5] py-12 md:py-16">
+      {/* Compact Page Header */}
+      <section className="bg-[#F0E9FC]/40 border-b border-[#E6DDED] py-12 md:py-16">
         <div className="site-container">
           <nav aria-label="Breadcrumb" className="mb-4">
-            <ol className="flex items-center gap-2 text-xs text-[#63554A]">
+            <ol className="flex items-center gap-2 text-xs text-[#716879]">
               <li>
-                <Link href="/" className="hover:text-[#265239] transition-colors">
+                <Link href="/" className="hover:text-[#6546A5] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3.5 h-3.5 text-[#63554A]/60" />
+                <ChevronRight className="w-3.5 h-3.5 text-[#CDB8F4]" />
               </li>
-              <li className="font-semibold text-[#231A14]" aria-current="page">
+              <li className="font-semibold text-[#291B35]" aria-current="page">
                 Contact & Location
               </li>
             </ol>
           </nav>
 
-          <span className="text-eyebrow text-[#CB5E1C] block mb-2">
+          <span className="text-eyebrow text-[#6546A5] block mb-2 font-semibold">
             PUNE TEMPLE FLORIST
           </span>
-          <h1 className="text-h1 font-heading text-[#231A14] mb-3">
+          <h1 className="text-h1 font-heading text-[#291B35] mb-3">
             Contact our shop & visit in Pune
           </h1>
-          <p className="text-intro text-[#63554A]">
+          <p className="text-intro text-[#716879]">
             We are open early from 5:30 AM for morning temple poojas. Message us on WhatsApp or call before you visit.
           </p>
         </div>
       </section>
 
       {/* Main Contact Section */}
-      <section className="site-section bg-[#FCF9F4]">
+      <section className="site-section bg-[#FCFAF7]">
         <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            {/* Left Column: 6 cols — Info Card & Direct Action Buttons */}
+            {/* Left Column: 6 cols — Contact Info Card & Action Buttons */}
             <div className="lg:col-span-6 space-y-8">
               <div className="site-card p-6 md:p-8 space-y-6">
                 {/* Live Status Header */}
-                <div className="flex items-center justify-between pb-6 border-b border-[#E3D7C5]">
+                <div className="flex items-center justify-between pb-6 border-b border-[#E6DDED]">
                   <div>
-                    <span className="text-xs uppercase tracking-wider font-semibold text-[#CB5E1C] block">
+                    <span className="text-xs uppercase tracking-wider font-semibold text-[#6546A5] block">
                       CURRENT SHOP STATUS
                     </span>
-                    <h2 className="font-heading text-xl text-[#231A14] mt-0.5">
+                    <h2 className="font-heading text-xl text-[#291B35] mt-0.5">
                       Early Morning Hours
                     </h2>
                   </div>
@@ -153,14 +148,14 @@ export default function ContactPage() {
                 <div className="space-y-5 text-sm md:text-base">
                   {/* Address */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#ECE3D5] flex items-center justify-center flex-shrink-0 border border-[#E3D7C5]">
-                      <MapPin className="w-5 h-5 text-[#265239]" />
+                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
+                      <MapPin className="w-5 h-5 text-[#6546A5]" />
                     </div>
                     <div>
-                      <strong className="text-[#231A14] block font-semibold mb-0.5">
+                      <strong className="text-[#291B35] block font-semibold mb-0.5">
                         Shop Address:
                       </strong>
-                      <p className="text-[#63554A] leading-relaxed">
+                      <p className="text-[#716879] leading-relaxed">
                         {siteContent.contact.address}
                       </p>
                     </div>
@@ -168,16 +163,16 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#ECE3D5] flex items-center justify-center flex-shrink-0 border border-[#E3D7C5]">
-                      <Phone className="w-5 h-5 text-[#265239]" />
+                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
+                      <Phone className="w-5 h-5 text-[#6546A5]" />
                     </div>
                     <div>
-                      <strong className="text-[#231A14] block font-semibold mb-0.5">
+                      <strong className="text-[#291B35] block font-semibold mb-0.5">
                         Phone Call:
                       </strong>
                       <a
                         href={`tel:${siteContent.contact.phoneTel}`}
-                        className="text-[#265239] hover:underline font-medium"
+                        className="text-[#6546A5] hover:underline font-medium"
                       >
                         {siteContent.contact.phoneDisplay}
                       </a>
@@ -186,35 +181,35 @@ export default function ContactPage() {
 
                   {/* WhatsApp */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#ECE3D5] flex items-center justify-center flex-shrink-0 border border-[#E3D7C5]">
-                      <MessageCircle className="w-5 h-5 text-[#265239]" />
+                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
+                      <MessageCircle className="w-5 h-5 text-[#6546A5]" />
                     </div>
                     <div>
-                      <strong className="text-[#231A14] block font-semibold mb-0.5">
+                      <strong className="text-[#291B35] block font-semibold mb-0.5">
                         WhatsApp Enquiries & Orders:
                       </strong>
-                      <p className="text-[#63554A] text-sm mb-1">
+                      <p className="text-[#716879] text-sm mb-1">
                         {siteContent.contact.whatsappDisplay}
                       </p>
-                      <span className="text-xs text-[#CB5E1C] font-semibold">
+                      <span className="text-xs text-[#E99A28] font-semibold">
                         Fastest way to check daily morning stock
                       </span>
                     </div>
                   </div>
 
-                  {/* Hours */}
+                  {/* Operating Hours */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[10px] bg-[#ECE3D5] flex items-center justify-center flex-shrink-0 border border-[#E3D7C5]">
-                      <Clock className="w-5 h-5 text-[#265239]" />
+                    <div className="w-10 h-10 rounded-[10px] bg-[#F0E9FC] flex items-center justify-center flex-shrink-0 border border-[#E6DDED]">
+                      <Clock className="w-5 h-5 text-[#6546A5]" />
                     </div>
                     <div>
-                      <strong className="text-[#231A14] block font-semibold mb-0.5">
+                      <strong className="text-[#291B35] block font-semibold mb-0.5">
                         Operating Hours:
                       </strong>
-                      <p className="text-[#231A14] font-medium">
+                      <p className="text-[#291B35] font-medium">
                         {siteContent.contact.openingHoursDisplay} · Daily
                       </p>
-                      <p className="text-xs text-[#63554A] mt-1">
+                      <p className="text-xs text-[#716879] mt-1">
                         {siteContent.contact.morningNote}
                       </p>
                     </div>
@@ -222,8 +217,8 @@ export default function ContactPage() {
                 </div>
 
                 {/* Important Pickup Policy Box */}
-                <div className="p-4 rounded-[12px] bg-[#ECE3D5]/60 border border-[#E3D7C5] text-xs text-[#63554A] space-y-1">
-                  <div className="font-semibold text-[#231A14] flex items-center gap-1.5">
+                <div className="p-4 rounded-[12px] bg-[#F0E9FC]/50 border border-[#E6DDED] text-xs text-[#716879] space-y-1">
+                  <div className="font-semibold text-[#291B35] flex items-center gap-1.5">
                     <span>Payment Policy:</span>
                   </div>
                   <p>{siteContent.contact.pickupPolicy}</p>
@@ -236,7 +231,7 @@ export default function ContactPage() {
               </div>
 
               {/* Shopfront Atmosphere Photo */}
-              <div className="shadow-lg rounded-[24px] overflow-hidden border border-[#E3D7C5]">
+              <div className="shadow-md rounded-[20px] overflow-hidden border border-[#E6DDED]">
                 <SmartImage
                   src="/images/contact/shop-front.webp"
                   alt="Atmospheric entrance of Shree Ganesh Flowers stall near the temple in Pune"
@@ -247,16 +242,16 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Column: 6 cols — Structured WhatsApp Enquiry Helper */}
+            {/* Right Column: 6 cols — Validated WhatsApp Message Composer */}
             <div className="lg:col-span-6">
               <div className="site-card p-6 md:p-8">
-                <span className="text-eyebrow text-[#CB5E1C] block mb-2">
+                <span className="text-eyebrow text-[#6546A5] block mb-2 font-semibold">
                   MESSAGE COMPOSER
                 </span>
-                <h2 className="font-heading text-2xl text-[#231A14] mb-2">
+                <h2 className="font-heading text-2xl text-[#291B35] mb-2">
                   Prepare your order message
                 </h2>
-                <p className="text-sm text-[#63554A] mb-6 leading-relaxed">
+                <p className="text-sm text-[#716879] mb-6 leading-relaxed">
                   Fill in your details to create a clear message that opens directly in WhatsApp. You will review and send it yourself.
                 </p>
 
@@ -265,9 +260,9 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-name"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#231A14] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
                     >
-                      Your Name <span className="text-[#CB5E1C]">*</span>
+                      Your Name <span className="text-[#E99A28]">*</span>
                     </label>
                     <input
                       type="text"
@@ -276,9 +271,9 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="e.g. Ramesh Joshi"
-                      className={`w-full h-[48px] px-4 rounded-[8px] bg-[#FCF9F4] border ${
-                        errors.name ? "border-red-500" : "border-[#E3D7C5]"
-                      } text-[#231A14] text-sm focus:outline-none focus:ring-2 focus:ring-[#CB5E1C]`}
+                      className={`w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border ${
+                        errors.name ? "border-red-500" : "border-[#E6DDED]"
+                      } text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]`}
                       required
                     />
                     {errors.name && (
@@ -292,9 +287,9 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-phone"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#231A14] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
                     >
-                      Mobile Phone (India 10-digits) <span className="text-[#CB5E1C]">*</span>
+                      Mobile Phone (India 10-digits) <span className="text-[#E99A28]">*</span>
                     </label>
                     <input
                       type="tel"
@@ -304,9 +299,9 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="e.g. 98220 12345"
-                      className={`w-full h-[48px] px-4 rounded-[8px] bg-[#FCF9F4] border ${
-                        errors.phone ? "border-red-500" : "border-[#E3D7C5]"
-                      } text-[#231A14] text-sm focus:outline-none focus:ring-2 focus:ring-[#CB5E1C]`}
+                      className={`w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border ${
+                        errors.phone ? "border-red-500" : "border-[#E6DDED]"
+                      } text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]`}
                       required
                     />
                     {errors.phone && (
@@ -320,7 +315,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-occasion"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#231A14] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
                     >
                       Select Occasion / Flower Type
                     </label>
@@ -329,7 +324,7 @@ export default function ContactPage() {
                       name="occasion"
                       value={formData.occasion}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[8px] bg-[#FCF9F4] border border-[#E3D7C5] text-[#231A14] text-sm focus:outline-none focus:ring-2 focus:ring-[#CB5E1C]"
+                      className="w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border border-[#E6DDED] text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]"
                     >
                       <option value="Pooja Flowers">Daily Pooja Flowers (Loose marigolds, durva, hibiscus)</option>
                       <option value="Wedding Garlands">Wedding Garlands (Varmala) — 1 day in advance</option>
@@ -344,7 +339,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-pickup"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#231A14] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
                     >
                       Preferred Pickup Timing
                     </label>
@@ -353,7 +348,7 @@ export default function ContactPage() {
                       name="pickupTime"
                       value={formData.pickupTime}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[8px] bg-[#FCF9F4] border border-[#E3D7C5] text-[#231A14] text-sm focus:outline-none focus:ring-2 focus:ring-[#CB5E1C]"
+                      className="w-full h-[48px] px-4 rounded-[10px] bg-[#FFFFFF] border border-[#E6DDED] text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]"
                     >
                       <option value="Early Dawn (5:30 AM - 7:00 AM)">Early Dawn (5:30 AM – 7:00 AM) · Pre-darshan</option>
                       <option value="Morning (7:00 AM - 11:00 AM)">Morning (7:00 AM – 11:00 AM)</option>
@@ -366,7 +361,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-message"
-                      className="block text-xs uppercase tracking-wider font-semibold text-[#231A14] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-semibold text-[#291B35] mb-1.5"
                     >
                       Specific Requirements (Optional)
                     </label>
@@ -377,9 +372,9 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={handleInputChange}
                       placeholder="e.g. Need 2 varmala sets in red rose petals, pickup tomorrow at 7 AM"
-                      className={`w-full p-4 rounded-[8px] bg-[#FCF9F4] border ${
-                        errors.message ? "border-red-500" : "border-[#E3D7C5]"
-                      } text-[#231A14] text-sm focus:outline-none focus:ring-2 focus:ring-[#CB5E1C]`}
+                      className={`w-full p-4 rounded-[10px] bg-[#FFFFFF] border ${
+                        errors.message ? "border-red-500" : "border-[#E6DDED]"
+                      } text-[#291B35] text-sm focus:outline-none focus:ring-2 focus:ring-[#6546A5]`}
                     />
                     {errors.message && (
                       <p className="text-xs text-red-600 mt-1 font-medium">
@@ -388,19 +383,19 @@ export default function ContactPage() {
                     )}
                   </div>
 
-                  {/* Submit Button */}
+                  {/* Submit Action */}
                   <button
                     type="submit"
-                    className="btn-accent w-full justify-center text-base"
+                    className="btn-accent w-full justify-center text-sm font-semibold"
                     id="submit-enquiry-btn"
                   >
                     <Send className="w-4 h-4 text-white" />
                     <span>Open Message in WhatsApp</span>
                   </button>
 
-                  {/* Privacy & Zero-Data-Storage Notice (Rule 6 & Rule 24 requirement) */}
-                  <div className="p-3 rounded-[8px] bg-[#ECE3D5]/50 border border-[#E3D7C5] text-[11px] text-[#63554A] flex items-start gap-2">
-                    <ShieldAlert className="w-4 h-4 text-[#265239] flex-shrink-0 mt-0.5" />
+                  {/* Privacy Notice */}
+                  <div className="p-3 rounded-[10px] bg-[#F0E9FC]/50 border border-[#E6DDED] text-[11px] text-[#716879] flex items-start gap-2">
+                    <ShieldAlert className="w-4 h-4 text-[#6546A5] flex-shrink-0 mt-0.5" />
                     <span>
                       <strong>Privacy notice:</strong> Nothing is stored or transmitted to external servers from this form. Clicking the button simply opens WhatsApp on your phone or computer with this message ready to send.
                     </span>
@@ -412,17 +407,17 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map & Directions Banner */}
-      <section className="bg-[#F5EFE6] py-12 border-t border-[#E3D7C5]">
+      {/* Map & Store Visit Banner (Pale Lilac Panel) */}
+      <section className="bg-[#F0E9FC]/50 py-12 border-t border-[#E6DDED]">
         <div className="site-container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-eyebrow text-[#CB5E1C] block mb-1">
+            <span className="text-eyebrow text-[#6546A5] block mb-1 font-semibold">
               STORE VISITS IN PUNE
             </span>
-            <h2 className="font-heading text-2xl text-[#231A14]">
+            <h2 className="font-heading text-2xl text-[#291B35]">
               Finding our stall near the temple
             </h2>
-            <p className="text-sm text-[#63554A] mt-1 max-w-xl">
+            <p className="text-sm text-[#716879] mt-1 max-w-xl">
               We are located directly along the main temple approach road in Pune [ADD EXACT TEMPLE & STREET ADDRESS]. Look for our fresh marigold baskets and garland displays.
             </p>
           </div>
@@ -438,7 +433,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Closing CTA */}
+      {/* Closing CTA Band */}
       <CTASection
         heading="Questions about today's fresh flowers?"
         subtext="Give us a call or send a quick WhatsApp message. We are ready at 5:30 AM every morning."

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { siteContent } from "@/content/site";
 import { Header } from "@/components/Header";
@@ -12,28 +12,28 @@ const dmSerif = DM_Serif_Display({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteContent.brand.name} | Florist in Pune`,
+    default: `${siteContent.brand.name} | Temple Florist in Pune`,
     template: `%s | ${siteContent.brand.name}`,
   },
   description:
-    "Authentic temple-side florist in Pune. Handcrafted wedding garlands, daily fresh pooja flowers, bouquets, and car decoration. Confirm on WhatsApp, pay at pickup.",
+    "Fresh temple garlands and daily devotional flowers in Pune. Handcrafted wedding varmala, morning pooja flowers, celebratory bouquets, and car decorations. Confirm on WhatsApp, pay at pickup.",
   metadataBase: new URL("https://shreeganeshflowers-pune.local"),
   keywords: [
     "Florist Pune",
-    "Pooja flowers Pune",
     "Temple flower shop Pune",
+    "Pooja flowers Pune",
     "Wedding garlands Pune",
     "Varmala Pune",
-    "Fresh marigolds Pune",
+    "Daily fresh flowers Pune",
     "WhatsApp flower order Pune",
   ],
   authors: [{ name: siteContent.brand.name }],
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: `${siteContent.brand.name} | Temple Florist in Pune`,
+    title: `${siteContent.brand.name} | Fresh Temple Flowers & Garlands (Pune)`,
     description:
-      "Fresh daily pooja flowers, wedding varmala, celebration bouquets and custom garlands. Open from 5:30 AM daily in Pune.",
+      "A boutique temple florist offering daily fresh pooja flowers, wedding varmala, celebratory bouquets, and custom garlands. Open daily from 5:30 AM in Pune.",
     type: "website",
     locale: "en_IN",
     siteName: siteContent.brand.name,
@@ -71,13 +71,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSerif.variable} ${dmSans.variable} h-full scroll-smooth`}
+      className={`${dmSerif.variable} ${inter.variable} h-full scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-[#FCF9F4] text-[#231A14] antialiased">
+      <body className="min-h-full flex flex-col bg-[#FCFAF7] text-[#291B35] antialiased">
         {/* Accessible Skip-to-content Link */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-[#265239] text-white rounded-[8px] font-semibold text-sm shadow-md"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-[#291B35] text-white rounded-[8px] font-semibold text-sm shadow-md"
         >
           Skip to main content
         </a>

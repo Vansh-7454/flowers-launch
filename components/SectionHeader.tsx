@@ -21,19 +21,19 @@ export function SectionHeader({
   const alignClass = align === "center" ? "text-center mx-auto" : "text-left";
 
   return (
-    <div className={`max-w-[640px] mb-12 md:mb-16 ${alignClass} ${className}`}>
+    <div className={`max-w-[660px] mb-12 md:mb-16 ${alignClass} ${className}`}>
       {eyebrow && (
         <div
-          className={`text-eyebrow mb-3 ${
-            isDark ? "text-[#F3B278]" : "text-[#CB5E1C]"
+          className={`text-eyebrow mb-2.5 font-semibold tracking-[0.14em] uppercase ${
+            isDark ? "text-[#F2C94C]" : "text-[#6546A5]"
           }`}
         >
           {eyebrow}
         </div>
       )}
       <h2
-        className={`text-h2 font-heading tracking-tight mb-4 ${
-          isDark ? "text-[#F7F4EE]" : "text-[#231A14]"
+        className={`text-h2 font-heading tracking-tight mb-3.5 ${
+          isDark ? "text-[#FCFAF7]" : "text-[#291B35]"
         }`}
       >
         {heading}
@@ -41,7 +41,7 @@ export function SectionHeader({
       {intro && (
         <p
           className={`text-intro ${
-            isDark ? "text-[#B3C4B8]" : "text-[#63554A]"
+            isDark ? "text-[#D8CEE2]" : "text-[#716879]"
           }`}
         >
           {intro}

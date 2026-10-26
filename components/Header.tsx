@@ -37,14 +37,14 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 h-[64px] md:h-[72px] bg-[#FCF9F4] border-b border-[#E3D7C5] transition-colors">
+      <header className="sticky top-0 z-40 h-[64px] md:h-[72px] bg-[#FCFAF7]/95 backdrop-blur-md border-b border-[#E6DDED] transition-colors">
         <div className="site-container h-full flex items-center justify-between gap-4">
-          {/* Logo */}
+          {/* Brand Logo */}
           <div className="flex items-center gap-3">
             <Logo variant="full" />
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation Links */}
           <nav
             aria-label="Main Navigation"
             className="hidden md:flex items-center gap-8"
@@ -55,17 +55,17 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-base font-medium py-1 transition-colors relative ${
+                  className={`text-[0.9375rem] font-medium py-1.5 transition-colors relative ${
                     isActive
-                      ? "text-[#265239] font-semibold"
-                      : "text-[#231A14] hover:text-[#265239]"
+                      ? "text-[#6546A5] font-semibold"
+                      : "text-[#291B35] hover:text-[#6546A5]"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {link.label}
                   {isActive && (
                     <span
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#265239] rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#6546A5] rounded-full"
                       aria-hidden="true"
                     />
                   )}
@@ -74,7 +74,7 @@ export function Header() {
             })}
           </nav>
 
-          {/* Actions: Live status & WhatsApp CTA */}
+          {/* Actions: Live Shop Status & Order on WhatsApp CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <OpenStatusBadge compact />
             <a
@@ -89,13 +89,13 @@ export function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Actions & Menu Toggle */}
           <div className="flex md:hidden items-center gap-2">
             <a
               href={generalWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-11 h-11 rounded-[8px] bg-[#265239] text-white"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-[10px] bg-[#291B35] text-white"
               aria-label="Order on WhatsApp"
             >
               <MessageCircle className="w-5 h-5" aria-hidden="true" />
@@ -103,7 +103,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center w-11 h-11 rounded-[8px] border border-[#E3D7C5] bg-[#F5EFE6] text-[#231A14]"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-[10px] border border-[#E6DDED] bg-[#FFFFFF] text-[#291B35]"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
               id="mobile-menu-toggle"
@@ -118,13 +118,13 @@ export function Header() {
         </div>
       </header>
 
-      {/* Accessible Mobile Menu Modal */}
+      {/* Accessible Mobile Drawer Overlay */}
       {mobileMenuOpen && (
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
-          className="fixed inset-0 top-[64px] z-50 bg-[#FCF9F4] flex flex-col p-6 border-t border-[#E3D7C5] overflow-y-auto"
+          className="fixed inset-0 top-[64px] z-50 bg-[#FCFAF7] flex flex-col p-6 border-t border-[#E6DDED] overflow-y-auto"
         >
           <div className="mb-6">
             <OpenStatusBadge />
@@ -138,10 +138,10 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-xl py-3 px-4 rounded-[8px] font-medium transition-colors ${
+                  className={`text-lg py-3 px-4 rounded-[10px] font-medium transition-colors ${
                     isActive
-                      ? "bg-[#265239] text-white font-semibold"
-                      : "text-[#231A14] bg-[#F5EFE6] hover:bg-[#ECE3D5]"
+                      ? "bg-[#6546A5] text-white font-semibold"
+                      : "text-[#291B35] bg-[#FFFFFF] border border-[#E6DDED] hover:bg-[#F0E9FC]"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -151,7 +151,7 @@ export function Header() {
             })}
           </nav>
 
-          <div className="mt-8 pt-6 border-t border-[#E3D7C5] flex flex-col gap-3">
+          <div className="mt-8 pt-6 border-t border-[#E6DDED] flex flex-col gap-3">
             <a
               href={generalWhatsAppUrl}
               target="_blank"
@@ -165,17 +165,17 @@ export function Header() {
               href={`tel:${siteContent.contact.phoneTel}`}
               className="btn-secondary w-full justify-center"
             >
-              <Phone className="w-5 h-5 text-[#265239]" aria-hidden="true" />
+              <Phone className="w-5 h-5 text-[#6546A5]" aria-hidden="true" />
               <span>Call Shop: {siteContent.contact.phoneDisplay}</span>
             </a>
           </div>
 
-          <div className="mt-auto pt-6 text-xs text-[#63554A]">
-            <p className="font-semibold text-[#231A14]">
+          <div className="mt-auto pt-6 text-xs text-[#716879]">
+            <p className="font-semibold text-[#291B35]">
               {siteContent.brand.name}
             </p>
             <p className="mt-1">{siteContent.contact.address}</p>
-            <p className="mt-1 font-medium text-[#265239]">
+            <p className="mt-1 font-medium text-[#6546A5]">
               {siteContent.contact.openingHoursDisplay} · Daily
             </p>
           </div>

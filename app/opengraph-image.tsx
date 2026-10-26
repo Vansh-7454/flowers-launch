@@ -19,54 +19,55 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#FCF9F4",
-          border: "16px solid #265239",
+          backgroundColor: "#FCFAF7",
+          border: "16px solid #291B35",
           padding: "60px",
           fontFamily: "serif",
         }}
       >
-        {/* Brand Emblem */}
+        {/* Brand Floral Emblem */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            width: "72px",
-            height: "72px",
-            borderRadius: "36px",
-            backgroundColor: "#265239",
-            color: "#F3B278",
+            width: "76px",
+            height: "76px",
+            borderRadius: "38px",
+            backgroundColor: "#291B35",
+            color: "#F2C94C",
             marginBottom: "20px",
             fontSize: "36px",
             fontWeight: "bold",
+            border: "2px solid #CDB8F4",
           }}
         >
           SGF
         </div>
 
-        {/* Brand Name */}
+        {/* Brand Name in Deep Plum */}
         <div
           style={{
             fontSize: "64px",
             fontWeight: "bold",
-            color: "#231A14",
+            color: "#291B35",
             letterSpacing: "-0.02em",
             textAlign: "center",
-            marginBottom: "12px",
+            marginBottom: "10px",
           }}
         >
           {siteContent.brand.name}
         </div>
 
-        {/* City & Trade subtitle */}
+        {/* City & Subtitle in Royal Plum */}
         <div
           style={{
             fontSize: "22px",
             fontWeight: "600",
-            color: "#CB5E1C",
+            color: "#6546A5",
             letterSpacing: "0.15em",
             textTransform: "uppercase",
-            marginBottom: "24px",
+            marginBottom: "20px",
           }}
         >
           {siteContent.brand.tradeSubtitle}
@@ -75,8 +76,8 @@ export default function OpenGraphImage() {
         {/* Tagline */}
         <div
           style={{
-            fontSize: "28px",
-            color: "#63554A",
+            fontSize: "26px",
+            color: "#716879",
             textAlign: "center",
             maxWidth: "800px",
             lineHeight: 1.4,
@@ -85,17 +86,17 @@ export default function OpenGraphImage() {
           {siteContent.brand.tagline}
         </div>
 
-        {/* Bottom trust bar */}
+        {/* Bottom Trust Badge */}
         <div
           style={{
             display: "flex",
-            marginTop: "40px",
+            marginTop: "36px",
             padding: "12px 32px",
             borderRadius: "30px",
-            backgroundColor: "#F5EFE6",
-            border: "1px solid #E3D7C5",
+            backgroundColor: "#F0E9FC",
+            border: "1px solid #E6DDED",
             fontSize: "18px",
-            color: "#265239",
+            color: "#291B35",
             fontWeight: "600",
           }}
         >

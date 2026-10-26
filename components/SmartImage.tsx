@@ -36,14 +36,14 @@ export function SmartImage({
   // Radius classes from design tokens
   const radiusClasses = {
     none: "rounded-none",
-    sm: "rounded-[8px]",
+    sm: "rounded-[10px]",
     md: "rounded-[16px]",
-    lg: "rounded-[24px]",
+    lg: "rounded-[20px]",
   }[radius];
 
   return (
     <div
-      className={`relative overflow-hidden bg-[#ECE3D5] ${ratioClasses} ${radiusClasses} ${className}`}
+      className={`relative overflow-hidden bg-[#F0E9FC]/60 ${ratioClasses} ${radiusClasses} ${className}`}
     >
       <Image
         src={src}
@@ -55,17 +55,17 @@ export function SmartImage({
         className="transition-transform duration-300 ease-out"
       />
 
-      {/* Subtle 7% Primary Green Tone Overlay (Rule 10 for consistent atmospheric tonality across images) */}
+      {/* Subtle 5% Lavender/Plum tone overlay for cohesive editorial floral styling */}
       {showOverlay && (
         <div
-          className="absolute inset-0 bg-[#265239]/[0.07] pointer-events-none"
+          className="absolute inset-0 bg-[#6546A5]/[0.05] pointer-events-none"
           aria-hidden="true"
         />
       )}
 
-      {/* Subtle inner 1px border for depth */}
+      {/* Delicate inner 1px border for clean framing */}
       <div
-        className={`absolute inset-0 border border-black/5 pointer-events-none ${radiusClasses}`}
+        className={`absolute inset-0 border border-black/[0.04] pointer-events-none ${radiusClasses}`}
         aria-hidden="true"
       />
     </div>

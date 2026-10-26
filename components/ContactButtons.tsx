@@ -42,7 +42,7 @@ export function ContactButtons({
         className="btn-secondary w-full sm:w-auto"
         id="contact-map-btn"
       >
-        <MapPin className="w-5 h-5 text-[#265239]" aria-hidden="true" />
+        <MapPin className="w-5 h-5 text-[#6546A5]" aria-hidden="true" />
         <span>Get directions to shop</span>
       </a>
     </div>

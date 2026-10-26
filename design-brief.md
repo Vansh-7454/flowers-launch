@@ -1,8 +1,8 @@
 # Design Brief — Shree Ganesh Flowers (Florist, Pune)
 
 ## 1. Theme Name & Concept
-- **Theme Name**: *Sacred Flora & Warm Editorial*
-- **One-Sentence Concept**: A calm, deeply trustworthy, and culturally authentic digital presence for a temple-side florist in Pune, crafted to make daily pooja flower inquiries and advance garland ordering effortless over WhatsApp.
+- **Theme Name**: *Lavender, Deep Plum & Natural Floral Accents*
+- **One-Sentence Concept**: A visually distinctive, premium, and culturally authentic digital presence combining the natural beauty of fresh temple offerings with the refined visual language of an independent editorial floral boutique.
 
 ## 2. Three Mood Words
 - **Devotional** (Reverent, sacred, grounded in daily temple rituals)
@@ -10,44 +10,46 @@
 - **Trustworthy** (Clear early hours, advance ordering clarity, pay-at-pickup honesty)
 
 ## 3. Full Colour Palette & WCAG AA Contrast Ratios
-Designed strictly with the 60-30-10 principle: 60% background/surface, 30% primary/text, 10% accent.
+Designed strictly with the 60-30-10 principle: 60% warm ivory & pure white surface, 30% deep plum text & royal plum interactive elements, 10% natural floral accents (marigold orange, yellow, rose pink, leaf green).
 
 | Token | Hex Value | Role & Usage | WCAG AA Contrast Ratio |
 |---|---|---|---|
-| **Background** | `#FCF9F4` | Canvas base (warm ivory petal) | Baseline |
-| **Surface** | `#F5EFE6` | Cards, secondary panels, inputs | 1.1:1 on bg (soft layering) |
-| **Surface-2** | `#ECE3D5` | Elevated containers, image frames | 1.3:1 on bg |
-| **Text** | `#231A14` | High-contrast body & titles (deep earth) | **14.8:1** on Background (AAA Pass) |
-| **Text-Muted** | `#63554A` | Secondary text, captions, metadata | **6.1:1** on Background (AA Pass) |
-| **Primary** | `#265239` | Sacred temple leaf green (headers, active state, badges) | **7.5:1** on Background (AAA Pass) |
-| **Primary-Contrast** | `#FFFFFF` | Text on Primary buttons | **7.2:1** on Primary (AAA Pass) |
-| **Accent** | `#CB5E1C` | Auspicious marigold orange (CTAs, highlight badges) | **4.6:1** on Background, **3.5:1** on white text (AA Large/Bold) |
-| **Border** | `#E3D7C5` | Crisp 1px borders, subtle dividers | High tactile clarity |
-| **Dark Band** | `#18281E` | Contrast section, footer, closing CTA | Base for dark blocks |
-| **Dark Band Text** | `#F7F4EE` | Text on Dark Band | **13.9:1** on Dark Band (AAA Pass) |
-| **Dark Band Accent** | `#F3B278` | Highlight text on Dark Band | **7.8:1** on Dark Band (AAA Pass) |
+| **Background (Warm Ivory)** | `#FCFAF7` | Primary canvas base | Baseline |
+| **Surface (Pure White)** | `#FFFFFF` | Cards, elevated containers | 1.05:1 on bg |
+| **Surface Lavender (Pale Lilac)** | `#F0E9FC` | Soft section panels, badge tiles | 1.15:1 on bg |
+| **Text (Deep Plum)** | `#291B35` | High-contrast body & headlines | **14.2:1** on Warm Ivory (AAA Pass) |
+| **Text-Muted (Muted Plum)** | `#716879` | Secondary text, captions, metadata | **5.4:1** on Warm Ivory (AA Pass) |
+| **Royal Plum** | `#6546A5` | Primary buttons, active nav, links | **6.5:1** on Warm Ivory (AAA Pass) |
+| **Soft Lavender** | `#CDB8F4` | Delicate borders, icon accents | 1.6:1 on bg |
+| **Soft Border** | `#E6DDED` | Subtle 1px dividers and borders | High tactile clarity |
+| **Marigold Orange (Accent)** | `#E99A28` | Auspicious CTAs, WhatsApp buttons | **4.2:1** on Warm Ivory (AA Large/Bold) |
+| **Marigold Yellow (Accent)** | `#F2C94C` | Morning sunlight highlights | Restrained accent |
+| **Leaf Green (Accent)** | `#667C54` | Fresh foliage, live open status | **4.8:1** on Warm Ivory (AA Pass) |
+| **Dark Band (Deep Plum)** | `#291B35` | Closing CTA, footer | Base for dark blocks |
+| **Dark Band Text** | `#FCFAF7` | Text on Dark Band | **14.2:1** on Dark Band (AAA Pass) |
+| **Dark Band Accent** | `#F2C94C` | Highlight text on Dark Band | **10.5:1** on Dark Band (AAA Pass) |
 
 ## 4. Typography System
 - **Heading Font**: `DM Serif Display` (Google Fonts via `next/font/google`).
-  - *Why it fits*: Elegant, organic curves with traditional warmth that mirrors the artistry of handcrafted Indian floral garlands and temple architecture. Far more authentic and respectful than sterile tech sans-serifs.
-- **Body Font**: `DM Sans` (Google Fonts via `next/font/google`).
-  - *Why it fits*: Crisp, geometric clarity with excellent legibility for Indian timings (`5:30 AM`), phone formatting (`+91`), and Marathi/Indian English terms (`Pooja`, `Varmala`, `Durva`).
+  - *Why it fits*: Elegant, organic curves with traditional warmth that mirrors the artistry of handcrafted Indian floral garlands and temple architecture.
+- **Body Font**: `Inter` (Google Fonts via `next/font/google`).
+  - *Why it fits*: Clean, geometric clarity with excellent legibility for Indian timings (`5:30 AM`), phone formatting (`+91`), and Marathi/Indian English terms (`Pooja`, `Varmala`, `Durva`).
 - **Scale**:
-  - Display (Hero): Fluid `clamp(2.75rem, 5vw, 4.5rem)` (44px mobile / 72px desktop), Line-height: `1.08`, Letter-spacing: `-0.02em`
-  - H1: `clamp(2.25rem, 4vw, 3.5rem)` (36px to 56px), Line-height: `1.12`
-  - H2: `clamp(1.75rem, 3vw, 2.5rem)` (28px to 40px), Line-height: `1.18`
-  - H3: `clamp(1.25rem, 2vw, 1.5rem)` (20px to 24px), Line-height: `1.25`
-  - Body: `1.125rem` (18px desktop) / `1rem` (16px mobile), Line-height: `1.6`
-  - Small / Caption / Eyebrow: `0.875rem` (14px) / `0.8125rem` (13px), uppercase letter-spacing `0.12em`
+  - Display (Hero): Fluid `clamp(2.75rem, 5vw, 4.25rem)` (44px mobile / 68px desktop), Line-height: `1.10`, Letter-spacing: `-0.02em`
+  - H1: `clamp(2.25rem, 4vw, 3.25rem)` (36px to 52px), Line-height: `1.15`
+  - H2: `clamp(1.75rem, 3vw, 2.35rem)` (28px to 38px), Line-height: `1.20`
+  - H3: `clamp(1.25rem, 2vw, 1.45rem)` (20px to 23px), Line-height: `1.25`
+  - Body: `1rem` (16px), Line-height: `1.6`
+  - Small / Caption / Eyebrow: `0.75rem` (12px) to `0.875rem` (14px), uppercase letter-spacing `0.14em`
 
 ## 5. Logo Concept
-- An elegant geometric 8-petaled sacred floral motif (hinting at traditional marigold offerings and threshold kolam patterns) centering on a solid auspicious bindu dot.
+- A minimalist geometric 8-petaled sacred floral motif (hinting at traditional marigold offerings and threshold kolam patterns) centering on a solid auspicious bindu dot in marigold orange.
 - Paired with a stately wordmark set in DM Serif Display ("SHREE GANESH FLOWERS") and a subtle tracked subtitle ("PUNE · TEMPLE FLORIST") that scales down cleanly to 24px without loss of detail.
 
 ## 6. Hero Layout Choice & Hero Image
-- **Layout Choice**: **Layout A (Split)**
-  - Left 6 columns: Eyebrow (`PUNE · TEMPLE-SIDE FLORIST`), fluid H1 (`Fresh morning temple flowers & handcrafted occasion garlands`), short supportive paragraph explaining daily fresh availability and WhatsApp ordering, live early-morning status badge (`Open Now · From 5:30 AM`), primary action (`Order on WhatsApp`), secondary action (`Browse Occasions`), and a 3-fact trust strip (`Fresh daily morning stock`, `Pay at shop pickup`, `Garlands ordered 1 day prior`).
-  - Right 6 columns: Large 4:5 aspect ratio image set in a 24px rounded radius container with a warm 1px border and soft layered shadow, depicting fresh morning marigold and jasmine garlands arranged in traditional cane baskets.
+- **Layout Choice**: **Layout A (Editorial Asymmetrical Split)**
+  - Left 6 columns: Eyebrow (`FRESH FLOWERS & GARLANDS · PUNE TEMPLE FLORIST`), fluid headline (`Fresh Flowers. Sacred Moments.`), short supportive paragraph explaining daily fresh availability and WhatsApp ordering, live early-morning status badge (`Open Now · From 5:30 AM`), primary action (`Order on WhatsApp`), secondary action (`Browse All Occasions`), and a 3-fact trust strip.
+  - Right 6 columns: Large 4:5 image set in a 20px rounded radius container with a pale lavender offset border and soft layered shadow, depicting fresh morning marigold and jasmine garlands arranged in traditional cane baskets.
 
 ## 7. Image Plan & Assets
 1. `public/images/home/hero.webp` (4:5) — Fresh morning marigolds, jasmine veni, and pooja blooms in cane baskets.
@@ -61,20 +63,20 @@ Designed strictly with the 60-30-10 principle: 60% background/surface, 30% prima
 
 ## 8. Section Order of the Home Page
 1. **Header**: Sticky 72px header (64px mobile), full logo, navigation (Home, Flowers & Occasions, Contact), live "Open Now" chip, and WhatsApp CTA button.
-2. **Hero Section (Layout A Split)**: Eyebrow, H1, supportive copy, primary WhatsApp button, secondary Occasions button, hero visual, and 3-item trust strip.
-3. **Live Timings & Daily Routine Banner**: Highlighting 5:30 AM early morning opening for temple goers and morning devotees in Pune.
-4. **Occasions Overview**: 5 curated cards (Pooja Flowers, Wedding Garlands, Bouquets, Car Decoration, Funeral Wreaths) with distinct WhatsApp prefilled order triggers (`Hi Shree Ganesh Flowers, I'd like to order: <occasion>`).
-5. **Garland Advance Notice Feature Split**: Dedicated feature block prominently highlighting: *"Order garlands one day in advance"* so the florist can source fresh stems from the wholesale market at dawn.
-6. **About Shree Ganesh Flowers**: Grounded story of the small temple florist in Pune, serving daily devotees and celebratory families with authentic warmth.
-7. **Temple Flower Care & Tradition Guide**: Practical guidance on keeping pooja flowers fragrant, misting garlands, and timing orders.
-8. **Closing CTA Band (Dark Band)**: Deep forest green section with direct WhatsApp ordering and phone call actions.
-9. **Footer**: 4-column layout with brand wordmark, quick links, contact & temple location, opening hours (5:30 AM – 9:00 PM), and copyright.
+2. **Hero Section (Editorial Asymmetrical Split)**: Eyebrow, H1, supportive copy, primary WhatsApp button, secondary Occasions button, hero visual, and live status badge.
+3. **Trust Strip**: 4 core facts on pale lilac panel.
+4. **Live Timings & Daily Routine Banner**: Highlighting 5:30 AM early morning opening for temple goers and morning devotees in Pune.
+5. **Occasions Overview**: 5 curated cards with 16px radius, subtle lavender borders, 2-3px hover lift, and distinct WhatsApp prefilled order triggers (`Hi Shree Ganesh Flowers, I'd like to order: <occasion>`).
+6. **Garland Advance Notice Feature Split**: Dedicated pale lilac feature block prominently highlighting: *"Order garlands one day in advance"* so the florist can source fresh stems from the wholesale market at dawn.
+7. **About Shree Ganesh Flowers**: Grounded story of the small temple florist in Pune, serving daily devotees and celebratory families with authentic warmth.
+8. **Temple Flower Care & Tradition Guide**: Practical guidance on keeping pooja flowers fragrant, misting garlands, and timing orders.
+9. **Frequently Asked Questions**: 4 interactive questions covering orders, morning hours, and advance booking.
+10. **Closing CTA Band (Deep Plum Band)**: Deep plum section with direct WhatsApp ordering and phone call actions.
+11. **Footer**: 4-column layout on deep plum base with brand wordmark, quick links, contact & temple location, opening hours (5:30 AM – 9:00 PM), and copyright.
 
 ## 9. Spacing & Type Tokens
-- Container: `min(100% - 40px, 1200px)`
+- Container: `min(100% - 40px, 1240px)`
 - Gutter: `20px` (mobile), `32px` (tablet), `48px` (desktop)
-- Section Vertical Padding: `clamp(64px, 8vw, 128px)`
-- Fixed Spacing Scale: `4, 8, 12, 16, 24, 32, 48, 64, 96, 128px`
-- Rhythm: Eyebrow-to-heading: `12px`; Heading-to-paragraph: `16px`; Paragraph-to-button: `32px`; Header-to-content: `48px–64px`; Card padding: `24px–32px`; Grid gap: `24px–32px`.
-- Radius: `8px` (buttons, inputs, pills), `16px` (cards), `24px` (hero & large feature visuals).
-- Shadows: Card (`0 2px 8px -2px rgba(35, 26, 20, 0.05), 0 8px 24px -4px rgba(35, 26, 20, 0.08)`), Raised (`0 12px 32px -4px rgba(35, 26, 20, 0.12)`).
+- Section Vertical Padding: `clamp(64px, 8vw, 112px)`
+- Radius: `10px` (buttons, inputs), `16px` (cards), `20px` (large feature visuals).
+- Shadows: Soft card (`0 2px 8px -2px rgba(41, 27, 53, 0.04), 0 8px 24px -4px rgba(41, 27, 53, 0.06)`), Hover lift (`0 14px 28px -4px rgba(101, 70, 165, 0.12)`).
