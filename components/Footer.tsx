@@ -135,7 +135,7 @@ export function Footer() {
               <p className="text-xs text-[#B3A8C4]">
                 {siteContent.contact.daysOpen}
               </p>
-              <p className="text-xs text-[#B99AFF] font-medium pt-1">
+              <p className="text-xs text-[#D7C5FF] font-medium pt-1">
                 {siteContent.contact.morningNote}
               </p>
               <div className="pt-2">
@@ -143,10 +143,10 @@ export function Footer() {
                   href={siteContent.contact.mapQueryUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-[10px] bg-[#B99AFF]/20 hover:bg-[#B99AFF]/30 text-xs font-semibold text-[#FCFAFF] transition-colors border border-[#B99AFF]/40"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[12px] bg-[#F1EBFF]/10 hover:bg-[#F1EBFF]/20 text-xs font-semibold text-[#FCFAFF] transition-all border border-[#E2D5FF]/30 hover:border-[#D5FF32]/60 hover:shadow-xs group max-w-full"
                 >
-                  <MapPin className="w-3.5 h-3.5 text-[#D5FF32]" aria-hidden="true" />
-                  <span>Get directions on Google Maps</span>
+                  <MapPin className="w-3.5 h-3.5 text-[#D5FF32] transition-transform duration-200 group-hover:scale-110 flex-shrink-0" aria-hidden="true" />
+                  <span className="truncate">Get directions on Google Maps</span>
                 </a>
               </div>
             </div>

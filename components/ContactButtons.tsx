@@ -14,37 +14,45 @@ export function ContactButtons({
   const whatsappUrl = getWhatsAppUrl(prefillMessage);
 
   return (
-    <div className={`flex flex-wrap items-center gap-3 sm:gap-4 ${className}`}>
+    <div className={`flex flex-col gap-3 w-full ${className}`}>
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn-primary flex-1 sm:flex-initial"
+        className="btn-whatsapp w-full justify-between group pl-6 pr-2.5"
         id="contact-whatsapp-btn"
       >
-        <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
         <span>Order on WhatsApp</span>
+        <span className="btn-side-badge">
+          <MessageCircle className="w-4 h-4 text-[#291638]" aria-hidden="true" />
+        </span>
       </a>
 
-      <a
-        href={`tel:${siteContent.contact.phoneTel}`}
-        className="btn-secondary flex-1 sm:flex-initial"
-        id="contact-call-btn"
-      >
-        <Phone className="w-5 h-5 text-[#291638]" aria-hidden="true" />
-        <span>Call Shop</span>
-      </a>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+        <a
+          href={`tel:${siteContent.contact.phoneTel}`}
+          className="btn-secondary w-full justify-between group pl-5 pr-2"
+          id="contact-call-btn"
+        >
+          <span>Call Shop</span>
+          <span className="btn-side-badge">
+            <Phone className="w-4 h-4 text-[#291638]" />
+          </span>
+        </a>
 
-      <a
-        href={siteContent.contact.mapQueryUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-secondary w-full sm:w-auto"
-        id="contact-map-btn"
-      >
-        <MapPin className="w-5 h-5 text-[#291638]" aria-hidden="true" />
-        <span>Get directions to shop</span>
-      </a>
+        <a
+          href={siteContent.contact.mapQueryUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-secondary w-full justify-between group pl-5 pr-2"
+          id="contact-map-btn"
+        >
+          <span>Directions</span>
+          <span className="btn-side-badge">
+            <MapPin className="w-4 h-4 text-[#291638]" />
+          </span>
+        </a>
+      </div>
     </div>
   );
 }

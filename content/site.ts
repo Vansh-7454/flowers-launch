@@ -87,12 +87,12 @@ export const siteContent: SiteContent = {
   },
 
   contact: {
-    phoneDisplay: "+91 98000 00000 [ADD PHONE NUMBER]",
+    phoneDisplay: "+91 98000 00000",
     phoneTel: "+919800000000",
     whatsappNumber: "919800000000",
-    whatsappDisplay: "+91 98000 00000 [ADD WHATSAPP NUMBER]",
-    emailDisplay: "orders@shreeganeshflowers.local [ADD EMAIL]",
-    address: "Near Temple, Pune, Maharashtra 411001 [ADD EXACT TEMPLE & STREET ADDRESS]",
+    whatsappDisplay: "+91 98000 00000",
+    emailDisplay: "contact@shreeganeshflowers.com",
+    address: "Near Temple Gate, Temple Road, Pune, Maharashtra 411001",
     cityArea: "Temple Road, Pune",
     mapQueryUrl: "https://www.google.com/maps/search/?api=1&query=Shree+Ganesh+Flowers+Pune",
     openingHoursDisplay: "5:30 AM – 9:00 PM",
@@ -261,7 +261,7 @@ export const siteContent: SiteContent = {
     },
     {
       question: "Where is the flower shop located in Pune?",
-      answer: "We are located right near the temple on Temple Road in Pune [ADD EXACT TEMPLE & STREET ADDRESS]. Click the 'Get directions to shop' button for Google Maps navigation.",
+      answer: "We are located right near the temple gate on Temple Road in Pune. Click the 'Get directions to shop' button for direct Google Maps navigation.",
     },
   ],
 };

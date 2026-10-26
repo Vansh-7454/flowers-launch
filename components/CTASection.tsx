@@ -16,60 +16,68 @@ export function CTASection({
   const whatsappUrl = getWhatsAppUrl(prefillMessage);
 
   return (
-    <section className="bg-[#291638] text-[#FCFAFF] site-section relative overflow-hidden">
-      {/* Subtle lavender and chartreuse radial glow */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#D7C5FF] via-[#CFB7FA] to-[#C4A3F7] text-[#291638] site-section border-t border-[#E2D5FF]">
+      {/* Ambient atmospheric studio lighting highlights (identical to Hero theme) */}
       <div
-        className="absolute inset-0 bg-radial-[circle_at_50%_0%] from-[#B99AFF]/20 via-[#291638]/60 to-transparent pointer-events-none"
+        className="absolute -top-32 right-1/4 w-[650px] h-[650px] rounded-full bg-[#FFFFFF]/40 blur-3xl pointer-events-none"
+        aria-hidden="true"
+      />
+      <div
+        className="absolute -bottom-24 left-10 w-[500px] h-[500px] rounded-full bg-[#F1EBFF]/50 blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 
-      {/* Decorative fine orbital ring behind text */}
-      <svg
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[340px] pointer-events-none opacity-20"
-        viewBox="0 0 700 300"
-        fill="none"
-        aria-hidden="true"
-      >
-        <ellipse cx="350" cy="150" rx="330" ry="120" stroke="#D5FF32" strokeWidth="1.5" strokeDasharray="6 6" />
-      </svg>
-
       <div className="site-container relative z-10 text-center max-w-[820px] mx-auto">
-        <div className="inline-flex items-center gap-2 mb-3.5">
-          <span className="w-2 h-2 rounded-full bg-[#D5FF32] shadow-[0_0_8px_#D5FF32]" />
-          <span className="text-eyebrow text-[#D5FF32] font-bold tracking-[0.16em]">
+        {/* Eyebrow Label with Electric Chartreuse Orb */}
+        <div className="inline-flex items-center gap-2.5 mb-5 px-3.5 py-1.5 rounded-full bg-[#F1EBFF]/90 border border-[#E2D5FF] text-[#291638] shadow-xs backdrop-blur-sm">
+          <span
+            className="w-2.5 h-2.5 rounded-full bg-[#D5FF32] shadow-[0_0_8px_#D5FF32]"
+            aria-hidden="true"
+          />
+          <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#291638]">
             ORDER DIRECTLY · PAY AT PICKUP
           </span>
         </div>
-        <h2 className="text-h2 font-heading tracking-tight text-[#FCFAFF] mb-4">
+
+        {/* H2 Display Editorial Headline */}
+        <h2 className="text-h2 font-heading tracking-tight text-[#291638] mb-4 font-bold text-balance">
           {heading}
         </h2>
-        <p className="text-intro text-[#B3A8C4] mx-auto mb-8 max-w-[620px]">
+
+        {/* Supportive Editorial Paragraph */}
+        <p className="text-intro text-[#291638]/85 mx-auto mb-8 max-w-[620px] leading-relaxed">
           {subtext}
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* Action Buttons: High-Contrast Primary & Secondary with Chartreuse Side Badges */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-accent w-full sm:w-auto px-8"
+            className="btn-primary w-full sm:w-auto justify-between sm:justify-center pl-6 pr-2.5 group shadow-md"
             id="cta-whatsapp-btn"
           >
-            <MessageCircle className="w-5 h-5 text-[#291638]" aria-hidden="true" />
             <span>Order on WhatsApp</span>
+            <span className="btn-side-badge">
+              <MessageCircle className="w-4 h-4 text-[#291638]" aria-hidden="true" />
+            </span>
           </a>
           <a
             href={`tel:${siteContent.contact.phoneTel}`}
-            className="btn-secondary w-full sm:w-auto px-7"
+            className="btn-secondary w-full sm:w-auto justify-between sm:justify-center pl-6 pr-2.5 group bg-white shadow-xs"
             id="cta-call-btn"
           >
-            <Phone className="w-5 h-5 text-[#291638]" aria-hidden="true" />
-            <span>Call Shop: {siteContent.contact.phoneDisplay}</span>
+            <span className="truncate">Call Shop: {siteContent.contact.phoneDisplay}</span>
+            <span className="btn-side-badge">
+              <Phone className="w-4 h-4 text-[#291638]" />
+            </span>
           </a>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-[#B99AFF]/25 flex items-center justify-center gap-2 text-xs text-[#B3A8C4]">
-          <MapPin className="w-4 h-4 text-[#D5FF32]" aria-hidden="true" />
+        {/* Pickup Location Note */}
+        <div className="mt-8 pt-6 border-t border-[#291638]/15 flex items-center justify-center gap-2 text-xs font-medium text-[#291638]/75">
+          <MapPin className="w-4 h-4 text-[#291638]" aria-hidden="true" />
           <span>{siteContent.contact.address}</span>
         </div>
       </div>

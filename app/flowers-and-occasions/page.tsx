@@ -1,8 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, ChevronRight } from "lucide-react";
-import { siteContent, getWhatsAppUrl } from "@/content/site";
+import { ChevronRight } from "lucide-react";
+import { siteContent } from "@/content/site";
 import { OccasionCard } from "@/components/OccasionCard";
 import { SectionHeader } from "@/components/SectionHeader";
 import { CTASection } from "@/components/CTASection";
@@ -14,10 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function FlowersAndOccasionsPage() {
-  const generalGarlandUrl = getWhatsAppUrl(
-    "Hi Shree Ganesh Flowers, I'd like to enquire about ordering custom garlands for an upcoming function."
-  );
-
   return (
     <div className="flex flex-col w-full">
       {/* Compact Editorial Page Header */}
@@ -55,29 +51,8 @@ export default function FlowersAndOccasionsPage() {
         </div>
       </section>
 
-      {/* Advance Garland Booking Notice Strip (Deep Plum Band with Chartreuse Accents) */}
-      <div className="bg-[#291638] text-[#FCFAFF] py-4 border-b border-[#B99AFF]/25">
-        <div className="site-container flex flex-col sm:flex-row items-center justify-between gap-3 text-xs md:text-sm">
-          <div className="flex items-center gap-2.5">
-            <Clock className="w-4 h-4 text-[#D5FF32] flex-shrink-0" />
-            <span className="font-semibold text-[#FCFAFF]">
-              Advance Notice: Please order wedding garlands & car decorations one day in advance.
-            </span>
-          </div>
-          <a
-            href={generalGarlandUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#D5FF32] hover:underline font-bold flex-shrink-0 flex items-center gap-1"
-          >
-            <span>Order ahead on WhatsApp</span>
-            <span>→</span>
-          </a>
-        </div>
-      </div>
-
       {/* Main Occasions Catalog Section */}
-      <section className="site-section bg-[#FCFAFF]">
+      <section className="site-section bg-gradient-to-b from-[#F8F5FF] via-[#F8F5FF] to-[#FCFAFF]">
         <div className="site-container">
           <SectionHeader
             eyebrow="SPECIALTY ARRANGEMENTS"
@@ -86,8 +61,13 @@ export default function FlowersAndOccasionsPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {siteContent.occasions.map((occasion) => (
-              <OccasionCard key={occasion.id} occasion={occasion} />
+            {siteContent.occasions.map((occasion, index) => (
+              <OccasionCard
+                key={occasion.id}
+                occasion={occasion}
+                featured={occasion.id === "wedding-garlands"}
+                priority={index === 0}
+              />
             ))}
           </div>
         </div>
@@ -103,7 +83,7 @@ export default function FlowersAndOccasionsPage() {
                 HOW OUR FLORAL SHOP OPERATES
               </span>
             </div>
-            <h2 className="text-h2 font-heading text-[#291638] mb-4">
+            <h2 className="text-h2 font-heading text-[#291638] mb-4 font-bold">
               Daily fresh stock & clear advance planning
             </h2>
             <p className="text-intro text-[#746781] mx-auto">
@@ -112,11 +92,11 @@ export default function FlowersAndOccasionsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="site-card p-6 md:p-8">
-              <div className="w-10 h-10 rounded-[12px] bg-[#291638] text-[#D5FF32] flex items-center justify-center font-bold text-sm mb-4">
+            <div className="site-card group p-7 md:p-8 flex flex-col bg-[#FCFAFF] rounded-[22px] border border-[#E2D5FF] transition-all duration-300 hover:-translate-y-1 hover:border-[#B99AFF] hover:shadow-[0_16px_36px_-6px_rgba(185,154,255,0.25)] relative overflow-hidden">
+              <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] text-[#291638] group-hover:bg-[#291638] group-hover:text-[#D5FF32] flex items-center justify-center font-heading text-lg font-bold mb-5 border border-[#E2D5FF] transition-colors shadow-xs">
                 01
               </div>
-              <h3 className="font-heading text-xl text-[#291638] mb-2 font-bold">
+              <h3 className="font-heading text-xl font-bold text-[#291638] mb-2.5 group-hover:text-[#381D4C] transition-colors">
                 Daily Temple Flowers
               </h3>
               <p className="text-sm text-[#746781] leading-relaxed">
@@ -124,11 +104,11 @@ export default function FlowersAndOccasionsPage() {
               </p>
             </div>
 
-            <div className="site-card p-6 md:p-8">
-              <div className="w-10 h-10 rounded-[12px] bg-[#291638] text-[#D5FF32] flex items-center justify-center font-bold text-sm mb-4">
+            <div className="site-card group p-7 md:p-8 flex flex-col bg-[#FCFAFF] rounded-[22px] border border-[#E2D5FF] transition-all duration-300 hover:-translate-y-1 hover:border-[#B99AFF] hover:shadow-[0_16px_36px_-6px_rgba(185,154,255,0.25)] relative overflow-hidden">
+              <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] text-[#291638] group-hover:bg-[#291638] group-hover:text-[#D5FF32] flex items-center justify-center font-heading text-lg font-bold mb-5 border border-[#E2D5FF] transition-colors shadow-xs">
                 02
               </div>
-              <h3 className="font-heading text-xl text-[#291638] mb-2 font-bold">
+              <h3 className="font-heading text-xl font-bold text-[#291638] mb-2.5 group-hover:text-[#381D4C] transition-colors">
                 1-Day Advance Garlands
               </h3>
               <p className="text-sm text-[#746781] leading-relaxed">
@@ -136,11 +116,11 @@ export default function FlowersAndOccasionsPage() {
               </p>
             </div>
 
-            <div className="site-card p-6 md:p-8">
-              <div className="w-10 h-10 rounded-[12px] bg-[#291638] text-[#D5FF32] flex items-center justify-center font-bold text-sm mb-4">
+            <div className="site-card group p-7 md:p-8 flex flex-col bg-[#FCFAFF] rounded-[22px] border border-[#E2D5FF] transition-all duration-300 hover:-translate-y-1 hover:border-[#B99AFF] hover:shadow-[0_16px_36px_-6px_rgba(185,154,255,0.25)] relative overflow-hidden">
+              <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] text-[#291638] group-hover:bg-[#291638] group-hover:text-[#D5FF32] flex items-center justify-center font-heading text-lg font-bold mb-5 border border-[#E2D5FF] transition-colors shadow-xs">
                 03
               </div>
-              <h3 className="font-heading text-xl text-[#291638] mb-2 font-bold">
+              <h3 className="font-heading text-xl font-bold text-[#291638] mb-2.5 group-hover:text-[#381D4C] transition-colors">
                 Pickup & Payment
               </h3>
               <p className="text-sm text-[#746781] leading-relaxed">

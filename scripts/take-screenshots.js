@@ -16,6 +16,7 @@ const pages = [
 ];
 
 const viewports = [
+  { width: 320, height: 640, name: '320' },
   { width: 375, height: 812, name: '375' },
   { width: 768, height: 1024, name: '768' },
   { width: 1440, height: 900, name: '1440' },

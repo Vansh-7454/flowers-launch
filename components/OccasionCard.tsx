@@ -1,103 +1,75 @@
 import React from "react";
-import { MessageCircle, Flower2, Sparkles, Gift, Car, HeartHandshake, Clock } from "lucide-react";
+import { MessageCircle, Clock, Sparkles } from "lucide-react";
 import { OccasionItem, getWhatsAppUrl } from "@/content/site";
 import { SmartImage } from "@/components/SmartImage";
 
 interface OccasionCardProps {
   occasion: OccasionItem;
   featured?: boolean;
+  priority?: boolean;
 }
 
-export function OccasionCard({ occasion, featured = false }: OccasionCardProps) {
+export function OccasionCard({ occasion, featured = false, priority = false }: OccasionCardProps) {
   const whatsappUrl = getWhatsAppUrl(occasion.whatsappPrefill);
-
-  // Line icon with stroke width 1.75 in Deep Plum
-  const renderIcon = () => {
-    const props = { className: "w-5 h-5 text-[#291638]", strokeWidth: 1.75 };
-    switch (occasion.iconName) {
-      case "Flower2":
-        return <Flower2 {...props} aria-hidden="true" />;
-      case "Sparkles":
-        return <Sparkles {...props} aria-hidden="true" />;
-      case "Gift":
-        return <Gift {...props} aria-hidden="true" />;
-      case "Car":
-        return <Car {...props} aria-hidden="true" />;
-      case "HeartHandshake":
-        return <HeartHandshake {...props} aria-hidden="true" />;
-      default:
-        return <Flower2 {...props} aria-hidden="true" />;
-    }
-  };
-
-  const isGarland = occasion.id === "wedding-garlands" || occasion.id === "car-decoration";
 
   return (
     <article
       id={occasion.id}
-      className={`site-card group flex flex-col overflow-hidden bg-[#FCFAFF] rounded-[20px] ${
-        featured ? "border-[#B99AFF] ring-1 ring-[#B99AFF]/50 shadow-md" : ""
+      className={`site-card-image group flex flex-col overflow-hidden rounded-[22px] transition-all duration-300 hover:-translate-y-1.5 ${
+        featured
+          ? "bg-gradient-to-b from-[#FCFAFF] to-[#F1EBFF]/70 border-2 border-[#B99AFF] shadow-[0_12px_32px_rgba(185,154,255,0.22)] hover:shadow-[0_24px_48px_-8px_rgba(185,154,255,0.35)]"
+          : "bg-[#FCFAFF] border border-[#E2D5FF] shadow-xs hover:border-[#B99AFF] hover:shadow-[0_20px_40px_-10px_rgba(185,154,255,0.25)]"
       }`}
     >
-      {/* Product Photography with Subtle Hover Zoom */}
-      <div className="relative overflow-hidden rounded-t-[20px]">
-        <div className="transition-transform duration-500 ease-out group-hover:scale-105">
+      {/* Product Photography — Clean, Unobstructed Floral Visuals */}
+      <div className="relative overflow-hidden rounded-t-[22px] bg-[#F1EBFF]">
+        <div className="transition-transform duration-500 ease-out group-hover:scale-[1.03]">
           <SmartImage
             src={occasion.image.src}
             alt={occasion.image.alt}
             ratio="4:3"
             radius="none"
+            priority={priority}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
-
-        {/* Advance Notice Pill for Garlands in Deep Plum & Electric Chartreuse */}
-        {isGarland && (
-          <div className="absolute top-3 right-3 z-10">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-[10px] bg-[#291638]/92 text-[#FCFAFF] text-xs font-semibold shadow-md backdrop-blur-md border border-[#B99AFF]/30">
-              <Clock className="w-3.5 h-3.5 text-[#D5FF32]" aria-hidden="true" />
-              <span>Order 1 day in advance</span>
-            </span>
-          </div>
-        )}
       </div>
 
-      {/* Card Details */}
-      <div className="p-6 md:p-7 flex flex-col flex-1">
-        {/* Category & Title */}
-        <div className="flex items-start gap-3.5 mb-4">
-          <div
-            className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs"
-            aria-hidden="true"
-          >
-            {renderIcon()}
-          </div>
-          <div>
-            <span className="text-[11px] uppercase tracking-[0.16em] font-bold text-[#291638] flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#D5FF32] shadow-[0_0_4px_#D5FF32]" />
-              {occasion.subtitle}
-            </span>
-            <h3 className="font-heading text-xl md:text-2xl text-[#291638] font-bold mt-1">
-              {occasion.title}
-            </h3>
-          </div>
+      {/* Refined Content Area */}
+      <div className="p-6 sm:p-7 flex flex-col flex-1">
+        {/* Eyebrow & Title */}
+        <div className="mb-2.5">
+          {featured && (
+            <div className="mb-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D5FF32] text-[#291638] text-[11px] font-extrabold uppercase tracking-wider shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 text-[#291638]" />
+                <span>Most Requested</span>
+              </span>
+            </div>
+          )}
+          <span className="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#746781] block mb-1">
+            {occasion.subtitle}
+          </span>
+          <h3 className="font-heading text-2xl font-bold text-[#291638] group-hover:text-[#381D4C] transition-colors leading-tight">
+            {occasion.title}
+          </h3>
         </div>
 
-        {/* Product Description */}
-        <p className="text-[#746781] text-sm leading-relaxed mb-5">
+        {/* Evocative Summary (Crisp 2-Line Rhythm) */}
+        <p className="text-[#746781] text-sm leading-relaxed mb-4 line-clamp-2 min-h-[40px]">
           {occasion.summary}
         </p>
 
-        {/* Fresh Flower Stems */}
-        <div className="mb-5 pt-4 border-t border-[#E2D5FF]">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[#291638] block mb-2">
-            Fresh flower elements:
+        {/* Botanical Ingredients Strip */}
+        <div className="mb-4">
+          <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#291638]/70 block mb-2">
+            Fresh Botanical Elements
           </span>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1.5 min-h-[56px] content-start">
             {occasion.keyFlowers.map((flower) => (
               <span
                 key={flower}
-                className="px-2.5 py-1 rounded-[8px] bg-[#F1EBFF] text-[#291638] text-xs font-medium border border-[#E2D5FF]"
+                className="px-2.5 py-0.5 rounded-full bg-[#F8F5FF] text-[#291638] text-xs font-medium border border-[#E2D5FF] transition-colors hover:bg-[#F1EBFF]"
               >
                 {flower}
               </span>
@@ -105,22 +77,34 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
           </div>
         </div>
 
-        {/* Timing Guideline */}
-        <div className="mt-auto mb-6 p-3.5 rounded-[14px] bg-[#F1EBFF] border border-[#E2D5FF] text-xs text-[#746781]">
-          <strong className="text-[#291638] font-bold">Timing note: </strong>
-          {occasion.advanceNotice}
+        {/* Sleek Timing Metadata Row */}
+        <div className="mt-auto pt-3.5 border-t border-[#E2D5FF]/80 mb-5 flex items-start gap-2 text-xs text-[#746781] min-h-[36px]">
+          <Clock className="w-3.5 h-3.5 text-[#7DA34A] flex-shrink-0 mt-0.5" aria-hidden="true" />
+          <p className="leading-snug">
+            <strong className="text-[#291638] font-semibold">Timing: </strong>
+            <span>
+              {occasion.id === "wedding-garlands" && "Order 1 day ahead for custom hand-weaving"}
+              {occasion.id === "car-decoration" && "Order 1 day ahead to reserve vehicle fitting slot"}
+              {occasion.id === "pooja-flowers" && "Available from 5:30 AM daily · Walk in or reserve"}
+              {occasion.id === "bouquets" && "Order 2–3 hours ahead or reserve previous evening"}
+              {occasion.id === "funeral-wreaths" && "Urgent priority dispatch · Fast morning preparation"}
+              {!["wedding-garlands", "car-decoration", "pooja-flowers", "bouquets", "funeral-wreaths"].includes(occasion.id) && occasion.advanceNotice}
+            </span>
+          </p>
         </div>
 
-        {/* WhatsApp Direct Action Button */}
+        {/* High-Contrast WhatsApp CTA Button with Chartreuse Side Badge */}
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-primary w-full justify-center group"
+          className="btn-primary w-full justify-between group/btn py-2 text-sm font-semibold tracking-wide pl-5 pr-2"
           id={`order-${occasion.id}-btn`}
         >
-          <MessageCircle className="w-4 h-4 text-[#D5FF32]" aria-hidden="true" />
-          <span>Order {occasion.title} on WhatsApp</span>
+          <span>Order on WhatsApp</span>
+          <span className="btn-side-badge">
+            <MessageCircle className="w-4 h-4 text-[#291638]" aria-hidden="true" />
+          </span>
         </a>
       </div>
     </article>

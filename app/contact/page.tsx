@@ -128,19 +128,19 @@ export default function ContactPage() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="site-section bg-[#FCFAFF]">
+      <section className="site-section bg-gradient-to-b from-[#F8F5FF] via-[#F8F5FF] to-[#FCFAFF]">
         <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
             {/* Left Column: 6 cols — Contact Info Card & Action Buttons */}
             <div className="lg:col-span-6 space-y-8">
-              <div className="site-card-info p-6 md:p-8 space-y-6 bg-[#FCFAFF]">
+              <div className="site-card-info p-7 md:p-8 space-y-6 bg-[#FCFAFF] rounded-[22px] border border-[#E2D5FF] shadow-sm">
                 {/* Live Status Header */}
-                <div className="flex items-center justify-between pb-6 border-b border-[#E2D5FF]">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 border-b border-[#E2D5FF]">
                   <div>
-                    <span className="text-xs uppercase tracking-wider font-bold text-[#291638] block">
+                    <span className="text-xs uppercase tracking-wider font-bold text-[#746781] block">
                       CURRENT SHOP STATUS
                     </span>
-                    <h2 className="font-heading text-xl text-[#291638] mt-0.5">
+                    <h2 className="font-heading text-xl md:text-2xl text-[#291638] font-bold mt-0.5">
                       Early Morning Hours
                     </h2>
                   </div>
@@ -151,7 +151,7 @@ export default function ContactPage() {
                 <div className="space-y-5 text-sm md:text-base">
                   {/* Address */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
+                    <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs text-[#291638]">
                       <MapPin className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
+                    <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs text-[#291638]">
                       <Phone className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -184,17 +184,18 @@ export default function ContactPage() {
 
                   {/* WhatsApp */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
+                    <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs text-[#291638]">
                       <MessageCircle className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
                       <strong className="text-[#291638] block font-bold mb-0.5">
                         WhatsApp Enquiries & Orders:
                       </strong>
-                      <p className="text-[#746781] text-sm mb-1 font-medium">
+                      <p className="text-[#746781] text-sm mb-1.5 font-medium">
                         {siteContent.contact.whatsappDisplay}
                       </p>
-                      <span className="text-xs text-[#F49A24] font-bold">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#291638] bg-[#F1EBFF] px-2.5 py-1 rounded-full border border-[#E2D5FF]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D5FF32] shadow-[0_0_4px_#D5FF32]" />
                         Fastest way to check daily morning stock
                       </span>
                     </div>
@@ -202,7 +203,7 @@ export default function ContactPage() {
 
                   {/* Operating Hours */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs">
+                    <div className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#E2D5FF] shadow-xs text-[#291638]">
                       <Clock className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -220,7 +221,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Important Pickup Policy Box */}
-                <div className="p-4 rounded-[14px] bg-[#F1EBFF] border border-[#E2D5FF] text-xs text-[#746781] space-y-1">
+                <div className="p-4 rounded-[14px] bg-[#F1EBFF]/80 border border-[#E2D5FF] text-xs text-[#746781] space-y-1">
                   <div className="font-bold text-[#291638] flex items-center gap-1.5">
                     <span>Payment Policy:</span>
                   </div>
@@ -234,12 +235,12 @@ export default function ContactPage() {
               </div>
 
               {/* Shopfront Atmosphere Photo */}
-              <div className="shadow-md rounded-[20px] overflow-hidden border border-[#E2D5FF]">
+              <div className="relative shadow-md rounded-[22px] overflow-hidden border border-[#E2D5FF] bg-[#FCFAFF] transition-all duration-300 hover:shadow-xl hover:border-[#B99AFF]">
                 <SmartImage
                   src="/images/contact/shop-front.webp"
                   alt="Atmospheric entrance of Shree Ganesh Flowers stall near the temple in Pune"
                   ratio="4:3"
-                  radius="lg"
+                  radius="none"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -247,17 +248,17 @@ export default function ContactPage() {
 
             {/* Right Column: 6 cols — Validated WhatsApp Message Composer */}
             <div className="lg:col-span-6">
-              <div className="site-card p-6 md:p-8 bg-[#FCFAFF]">
-                <div className="inline-flex items-center gap-2 mb-2">
+              <div className="site-card-info p-7 md:p-8 space-y-5 bg-[#FCFAFF] rounded-[22px] border border-[#E2D5FF] shadow-sm">
+                <div className="inline-flex items-center gap-2 mb-1">
                   <span className="w-2 h-2 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]" />
                   <span className="text-eyebrow text-[#291638] font-bold tracking-[0.16em]">
                     MESSAGE COMPOSER
                   </span>
                 </div>
-                <h2 className="font-heading text-2xl text-[#291638] mb-2 font-bold">
+                <h2 className="font-heading text-2xl md:text-3xl text-[#291638] font-bold">
                   Prepare your order message
                 </h2>
-                <p className="text-sm text-[#746781] mb-6 leading-relaxed">
+                <p className="text-sm text-[#746781] mb-5 leading-relaxed">
                   Fill in your details to create a clear message that opens directly in WhatsApp. You will review and send it yourself.
                 </p>
 
@@ -266,7 +267,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-name"
-                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-2"
                     >
                       Your Name <span className="text-[#F49A24]">*</span>
                     </label>
@@ -277,13 +278,13 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="e.g. Ramesh Joshi"
-                      className={`w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
+                      className={`w-full h-[50px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
                         errors.name ? "border-red-500" : "border-[#E2D5FF]"
-                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]`}
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#291638] transition-all hover:border-[#B99AFF]`}
                       required
                     />
                     {errors.name && (
-                      <p className="text-xs text-red-600 mt-1 font-medium">
+                      <p className="text-xs text-red-600 mt-1.5 font-medium">
                         {errors.name}
                       </p>
                     )}
@@ -293,7 +294,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-phone"
-                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-2"
                     >
                       Mobile Phone (India 10-digits) <span className="text-[#F49A24]">*</span>
                     </label>
@@ -305,13 +306,13 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="e.g. 98220 12345"
-                      className={`w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
+                      className={`w-full h-[50px] px-4 rounded-[12px] bg-[#FCFAFF] border ${
                         errors.phone ? "border-red-500" : "border-[#E2D5FF]"
-                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]`}
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#291638] transition-all hover:border-[#B99AFF]`}
                       required
                     />
                     {errors.phone && (
-                      <p className="text-xs text-red-600 mt-1 font-medium">
+                      <p className="text-xs text-red-600 mt-1.5 font-medium">
                         {errors.phone}
                       </p>
                     )}
@@ -321,7 +322,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-occasion"
-                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-2"
                     >
                       Select Occasion / Flower Type
                     </label>
@@ -330,7 +331,7 @@ export default function ContactPage() {
                       name="occasion"
                       value={formData.occasion}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#E2D5FF] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]"
+                      className="w-full h-[50px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#E2D5FF] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#291638] transition-all hover:border-[#B99AFF]"
                     >
                       <option value="Pooja Flowers">Daily Pooja Flowers (Loose marigolds, durva, hibiscus)</option>
                       <option value="Wedding Garlands">Wedding Garlands (Varmala) — 1 day in advance</option>
@@ -345,7 +346,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-pickup"
-                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-2"
                     >
                       Preferred Pickup Timing
                     </label>
@@ -354,7 +355,7 @@ export default function ContactPage() {
                       name="pickupTime"
                       value={formData.pickupTime}
                       onChange={handleInputChange}
-                      className="w-full h-[48px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#E2D5FF] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]"
+                      className="w-full h-[50px] px-4 rounded-[12px] bg-[#FCFAFF] border border-[#E2D5FF] text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#291638] transition-all hover:border-[#B99AFF]"
                     >
                       <option value="Early Dawn (5:30 AM - 7:00 AM)">Early Dawn (5:30 AM – 7:00 AM) · Pre-darshan</option>
                       <option value="Morning (7:00 AM - 11:00 AM)">Morning (7:00 AM – 11:00 AM)</option>
@@ -367,7 +368,7 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-message"
-                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-1.5"
+                      className="block text-xs uppercase tracking-wider font-bold text-[#291638] mb-2"
                     >
                       Specific Requirements (Optional)
                     </label>
@@ -380,10 +381,10 @@ export default function ContactPage() {
                       placeholder="e.g. Need 2 varmala sets in red rose petals, pickup tomorrow at 7 AM"
                       className={`w-full p-4 rounded-[12px] bg-[#FCFAFF] border ${
                         errors.message ? "border-red-500" : "border-[#E2D5FF]"
-                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#B99AFF]`}
+                      } text-[#291638] text-sm focus:outline-none focus:ring-2 focus:ring-[#B99AFF] focus:border-[#291638] transition-all hover:border-[#B99AFF]`}
                     />
                     {errors.message && (
-                      <p className="text-xs text-red-600 mt-1 font-medium">
+                      <p className="text-xs text-red-600 mt-1.5 font-medium">
                         {errors.message}
                       </p>
                     )}
@@ -392,15 +393,17 @@ export default function ContactPage() {
                   {/* Submit Action: Unified Primary Button */}
                   <button
                     type="submit"
-                    className="btn-primary w-full justify-center"
+                    className="btn-whatsapp w-full justify-between group pl-6 pr-2.5"
                     id="submit-enquiry-btn"
                   >
-                    <Send className="w-4 h-4 text-[#D5FF32]" />
                     <span>Open Message in WhatsApp</span>
+                    <span className="btn-side-badge">
+                      <Send className="w-4 h-4 text-[#291638]" />
+                    </span>
                   </button>
 
                   {/* Privacy Notice */}
-                  <div className="p-3.5 rounded-[12px] bg-[#F1EBFF] border border-[#E2D5FF] text-[11px] text-[#746781] flex items-start gap-2">
+                  <div className="p-4 rounded-[12px] bg-[#F1EBFF] border border-[#E2D5FF] text-[11px] text-[#746781] flex items-start gap-2.5">
                     <ShieldAlert className="w-4 h-4 text-[#291638] flex-shrink-0 mt-0.5" />
                     <span>
                       <strong className="text-[#291638]">Privacy notice:</strong> Nothing is stored or transmitted to external servers from this form. Clicking the button simply opens WhatsApp on your phone or computer with this message ready to send.
@@ -417,24 +420,29 @@ export default function ContactPage() {
       <section className="bg-[#F1EBFF] py-12 border-t border-[#E2D5FF]">
         <div className="site-container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-eyebrow text-[#291638] block mb-1 font-bold">
-              STORE VISITS IN PUNE
-            </span>
-            <h2 className="font-heading text-2xl text-[#291638]">
+            <div className="inline-flex items-center gap-2 mb-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]" />
+              <span className="text-eyebrow text-[#291638] font-bold tracking-[0.16em]">
+                STORE VISITS IN PUNE
+              </span>
+            </div>
+            <h2 className="font-heading text-2xl lg:text-3xl text-[#291638] font-bold">
               Finding our stall near the temple
             </h2>
-            <p className="text-sm text-[#746781] mt-1 max-w-xl">
-              We are located directly along the main temple approach road in Pune [ADD EXACT TEMPLE & STREET ADDRESS]. Look for our fresh marigold baskets and garland displays.
+            <p className="text-sm text-[#746781] mt-1 max-w-xl leading-relaxed">
+              We are located directly along the main temple approach road on Temple Road in Pune. Look for our fresh marigold baskets and garland displays.
             </p>
           </div>
           <a
             href={siteContent.contact.mapQueryUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary flex-shrink-0"
+            className="btn-primary w-full md:w-auto justify-between md:justify-center flex-shrink-0 group pl-6 pr-2.5"
           >
-            <MapPin className="w-4 h-4 text-[#D5FF32]" />
             <span>Open in Google Maps</span>
+            <span className="btn-side-badge">
+              <MapPin className="w-4 h-4 text-[#291638]" />
+            </span>
           </a>
         </div>
       </section>

@@ -21,13 +21,19 @@ export function Header() {
     }
     if (mobileMenuOpen) {
       document.addEventListener("keydown", handleKeyDown);
+      document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none";
     } else {
-      document.body.style.overflow = "unset";
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
     }
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "unset";
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.body.style.touchAction = "";
     };
   }, [mobileMenuOpen]);
 
@@ -87,11 +93,13 @@ export function Header() {
               href={generalWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-[42px] px-5 rounded-[12px] bg-[#291638] text-white hover:bg-[#3D2252] font-semibold text-sm border border-[#291638] shadow-sm hover:shadow-md transition-all cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#291638]"
+              className="btn-whatsapp h-[44px] pl-4 pr-1.5 py-0 min-h-0 text-sm group"
               id="header-whatsapp-btn"
             >
-              <MessageCircle className="w-4 h-4 text-[#D5FF32]" aria-hidden="true" />
               <span>Order on WhatsApp</span>
+              <span className="btn-side-badge w-7 h-7">
+                <MessageCircle className="w-3.5 h-3.5 text-[#291638]" />
+              </span>
             </a>
           </div>
 
@@ -101,15 +109,15 @@ export function Header() {
               href={generalWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] bg-[#291638] text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#291638]"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] bg-[#291638] text-[#FCFAFF] shadow-xs hover:bg-[#381D4C] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D5FF32] group"
               aria-label="Order on WhatsApp"
             >
-              <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
+              <MessageCircle className="w-5 h-5 text-[#D5FF32] transition-transform duration-200 group-hover:scale-110" aria-hidden="true" />
             </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] border border-[#E2D5FF] bg-[#FCFAFF] text-[#291638]"
+              className="inline-flex items-center justify-center w-11 h-11 rounded-[12px] border border-[#E2D5FF] bg-[#FCFAFF] text-[#291638] hover:bg-[#F1EBFF] transition-colors"
               aria-expanded={mobileMenuOpen}
               aria-label={mobileMenuOpen ? "Close menu" : "Open navigation menu"}
               id="mobile-menu-toggle"
@@ -130,13 +138,13 @@ export function Header() {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
-          className="fixed inset-0 top-[64px] z-50 bg-[#FCFAFF] flex flex-col p-6 border-t border-[#E2D5FF] overflow-y-auto"
+          className="fixed inset-x-0 bottom-0 top-[64px] z-50 bg-[#FCFAFF] flex flex-col px-5 py-4 border-t border-[#E2D5FF] overflow-y-auto overscroll-contain"
         >
-          <div className="mb-6">
+          <div className="mb-3.5">
             <OpenStatusBadge />
           </div>
 
-          <nav className="flex flex-col gap-3">
+          <nav className="flex flex-col gap-2">
             {siteContent.nav.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -144,10 +152,10 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg py-3 px-4 rounded-[12px] font-medium transition-colors ${
+                  className={`text-base py-2.5 px-4 rounded-[12px] font-medium transition-colors ${
                     isActive
-                      ? "bg-[#291638] text-white font-semibold"
-                      : "text-[#291638] bg-[#F1EBFF] border border-[#E2D5FF] hover:bg-[#D7C5FF]/30"
+                      ? "bg-[#291638] text-[#FCFAFF] font-semibold"
+                      : "text-[#291638] bg-[#F1EBFF] border border-[#E2D5FF] hover:bg-[#D7C5FF]/40"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -157,31 +165,35 @@ export function Header() {
             })}
           </nav>
 
-          <div className="mt-8 pt-6 border-t border-[#E2D5FF] flex flex-col gap-3">
+          <div className="mt-4 pt-4 border-t border-[#E2D5FF] flex flex-col gap-2.5">
             <a
               href={generalWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary w-full justify-center"
+              className="btn-whatsapp w-full justify-between group pl-6 pr-2.5"
             >
-              <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
               <span>Order on WhatsApp</span>
+              <span className="btn-side-badge">
+                <MessageCircle className="w-4 h-4 text-[#291638]" />
+              </span>
             </a>
             <a
               href={`tel:${siteContent.contact.phoneTel}`}
-              className="btn-secondary w-full justify-center"
+              className="btn-secondary w-full justify-between group pl-6 pr-2.5"
             >
-              <Phone className="w-5 h-5 text-[#291638]" aria-hidden="true" />
-              <span>Call Shop: {siteContent.contact.phoneDisplay}</span>
+              <span className="truncate">Call Shop: {siteContent.contact.phoneDisplay}</span>
+              <span className="btn-side-badge">
+                <Phone className="w-4 h-4 text-[#291638]" />
+              </span>
             </a>
           </div>
 
-          <div className="mt-auto pt-6 text-xs text-[#746781]">
+          <div className="mt-auto pt-3 text-[11px] text-[#746781] leading-tight">
             <p className="font-semibold text-[#291638]">
               {siteContent.brand.name}
             </p>
-            <p className="mt-1">{siteContent.contact.address}</p>
-            <p className="mt-1 font-medium text-[#291638]">
+            <p className="mt-0.5">{siteContent.contact.address}</p>
+            <p className="mt-0.5 font-medium text-[#291638]">
               {siteContent.contact.openingHoursDisplay} · Daily
             </p>
           </div>

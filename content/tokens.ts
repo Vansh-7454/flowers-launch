@@ -57,8 +57,86 @@ export const designTokens = {
   radii: {
     button: "12px",
     card: "20px",
+    cardLg: "24px",
     visual: "24px",
     pill: "9999px",
+  },
+
+  cards: {
+    standard: {
+      bg: "#FCFAFF",
+      border: "#E2D5FF",
+      radius: "20px",
+      shadow: "0 4px 20px -2px rgba(41, 22, 56, 0.05), 0 10px 28px -4px rgba(41, 22, 56, 0.06)",
+      hoverBorder: "#B99AFF",
+      hoverLift: "-4px",
+      hoverShadow: "0 16px 36px -4px rgba(185, 154, 255, 0.30)",
+    },
+    featured: {
+      bg: "#F1EBFF",
+      border: "#D7C5FF",
+      radius: "20px",
+      shadow: "0 4px 20px -2px rgba(41, 22, 56, 0.05), 0 10px 28px -4px rgba(41, 22, 56, 0.06)",
+      hoverBorder: "#B99AFF",
+      hoverLift: "-4px",
+      hoverShadow: "0 16px 36px -4px rgba(185, 154, 255, 0.30)",
+    },
+    imageLed: {
+      bg: "#FCFAFF",
+      border: "#E2D5FF",
+      radius: "20px",
+      imageRadius: "20px 20px 0 0",
+      imageZoom: "1.04",
+      hoverLift: "-4px",
+    },
+    information: {
+      bg: "#FCFAFF",
+      border: "#E2D5FF",
+      radius: "20px",
+    },
+  },
+
+  buttons: {
+    primary: {
+      bg: "#291638",
+      text: "#FCFAFF",
+      border: "transparent",
+      hoverBg: "#381D4C",
+      hoverBorder: "#D5FF32",
+      radius: "12px",
+      minHeight: "48px",
+      padding: "12px 24px",
+    },
+    secondary: {
+      bg: "#F1EBFF",
+      text: "#291638",
+      border: "#E2D5FF",
+      hoverBg: "#D7C5FF",
+      hoverBorder: "#B99AFF",
+      radius: "12px",
+      minHeight: "48px",
+      padding: "12px 24px",
+    },
+    accent: {
+      bg: "#D5FF32",
+      text: "#291638",
+      border: "transparent",
+      hoverBg: "#C5F220",
+      radius: "12px",
+      minHeight: "48px",
+      padding: "12px 24px",
+    },
+    whatsapp: {
+      bg: "#291638",
+      text: "#FCFAFF",
+      border: "#3D2252",
+      iconColor: "#D5FF32",
+      hoverBg: "#381D4C",
+      hoverBorder: "#D5FF32",
+      radius: "12px",
+      minHeight: "48px",
+      padding: "12px 24px",
+    },
   },
 
   spacing: {
@@ -70,18 +148,20 @@ export const designTokens = {
   },
 
   shadows: {
-    softCard: "0 2px 10px -2px rgba(41, 22, 56, 0.04), 0 8px 24px -4px rgba(41, 22, 56, 0.06)",
+    softCard: "0 4px 20px -2px rgba(41, 22, 56, 0.05), 0 10px 28px -4px rgba(41, 22, 56, 0.06)",
     elevated: "0 16px 40px -8px rgba(41, 22, 56, 0.12)",
-    hoverLift: "0 14px 28px -4px rgba(185, 154, 255, 0.28)",
+    hoverLift: "0 16px 36px -4px rgba(185, 154, 255, 0.30)",
     chartreuseGlow: "0 0 24px -2px rgba(213, 255, 50, 0.45)",
     lavenderGlow: "0 12px 36px -6px rgba(185, 154, 255, 0.35)",
   },
 
   transitions: {
     default: "all 300ms cubic-bezier(0.16, 1, 0.3, 1)",
-    button: "all 200ms ease",
+    button: "all 250ms cubic-bezier(0.16, 1, 0.3, 1)",
     lift: "transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease",
+    image: "transform 400ms cubic-bezier(0.16, 1, 0.3, 1)",
   },
 } as const;
 
 export type DesignTokens = typeof designTokens;
+
