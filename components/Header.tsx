@@ -64,7 +64,7 @@ export function Header() {
                 >
                   {isActive && (
                     <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]"
+                      className="w-1.5 h-1.5 rounded-full bg-[#E5A93C] shadow-[0_0_6px_#E5A93C]"
                       aria-hidden="true"
                     />
                   )}

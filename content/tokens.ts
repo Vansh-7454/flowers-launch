@@ -6,12 +6,16 @@
 
 export const designTokens = {
   colors: {
-    // Primary colours (Exact prompt palette)
-    vibrantLavender: "#B99AFF", // Vibrant Lavender - dominant hero tone
-    lightLavender: "#D7C5FF",   // Light Lavender - full hero canvas
+    // Primary colours (Adapted to 3D Braided Arch & Lavender Editorial Palette)
+    warmPeachYellow: "#F8DEC0", // Warm Peach-Yellow - hero canvas & studio backdrop
+    peachCream: "#FDF5EC",      // Peach Cream - subtle highlights & light panels
+    vibrantLavender: "#B99AFF", // Vibrant Lavender - braided arch & accents
+    lightLavender: "#D7C5FF",   // Light Lavender
     paleLavender: "#EEE6FF",    // Pale Lavender - editorial panels & chips
     deepPlum: "#291638",        // Deep Plum - typography, headers, dark bands
-    chartreuse: "#D5FF32",      // Chartreuse Green - electric spheres, orbital line, primary action
+    radiantGold: "#E5A93C",     // Radiant Gold - floating spheres, highlights
+    turquoise: "#138A7E",       // Turquoise - palm foliage, live status
+    chartreuse: "#D5FF32",      // Chartreuse Green
     freshLeafGreen: "#7DA34A",  // Fresh Leaf Green - natural foliage, open badge
     softWhite: "#FCFAFF",       // Soft White - card surfaces, clean content
     
@@ -23,6 +27,7 @@ export const designTokens = {
     // Text & borders
     mutedText: "#716879",       // Muted supportive text
     border: "#DCCCF7",          // Editorial borders & dividers
+    peachBorder: "#EDD0B2",     // Warm peach borders for hero section
 
     // Compatibility aliases
     lavender: "#B99AFF",

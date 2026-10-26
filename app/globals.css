@@ -303,12 +303,32 @@ body {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-8px) rotate(0.4deg);
+    transform: translateY(-8px) rotate(0.3deg);
   }
 }
 
 .animate-gentle-float {
-  animation: gentle-float 6s ease-in-out infinite;
+  animation: gentle-float 7s ease-in-out infinite;
+}
+
+/* Subtle Entrance Transitions for Hero Content & 3D Artwork */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade-up {
+  animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-fade-up-delay {
+  animation: hero-fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
 @keyframes orbital-glow {
@@ -326,10 +346,15 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .animate-gentle-float,
-  .animate-orbital-glow {
-    animation: none;
+  .animate-orbital-glow,
+  .animate-hero-fade-up,
+  .animate-hero-fade-up-delay {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
   .site-card:hover {
     transform: none;
   }
 }
+
