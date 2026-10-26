@@ -20,26 +20,26 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col w-full">
-      {/* 1. HERO SECTION (Full-Width Editorial Canvas with 3D Braided Arch) */}
-      <section className="relative overflow-hidden bg-[#FBD6A5] bg-gradient-to-r from-[#F7CF9A] via-[#FBD6A5] to-[#F5C790] pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 border-b border-[#E8C498]">
-        {/* Ambient atmospheric studio lighting highlights */}
+      {/* 1. HERO SECTION (Full-Width Uninterrupted Lavender 3D Editorial Canvas) */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#D7C5FF] via-[#CFB7FA] to-[#C4A3F7] pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 border-b border-[#DCCCF7]">
+        {/* Ambient atmospheric studio lighting highlight */}
         <div
-          className="absolute -top-36 right-1/4 w-[700px] h-[700px] rounded-full bg-[#FFFBF5]/60 blur-3xl pointer-events-none"
+          className="absolute -top-32 right-1/4 w-[650px] h-[650px] rounded-full bg-[#FFFFFF]/40 blur-3xl pointer-events-none"
           aria-hidden="true"
         />
         <div
-          className="absolute -bottom-24 left-10 w-[500px] h-[500px] rounded-full bg-[#F5C790]/50 blur-3xl pointer-events-none"
+          className="absolute -bottom-24 left-10 w-[500px] h-[500px] rounded-full bg-[#F1EBFF]/50 blur-3xl pointer-events-none"
           aria-hidden="true"
         />
 
         <div className="site-container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: ~44% Editorial Typography & Direct Actions */}
             <div className="lg:col-span-5 flex flex-col items-start z-10 animate-hero-fade-up">
-              {/* Eyebrow Label with Radiant Golden Orb */}
-              <div className="inline-flex items-center gap-2.5 mb-5 px-3.5 py-1.5 rounded-full bg-[#FFF9F2]/90 border border-[#ECCCA5] text-[#291638] shadow-xs">
+              {/* Eyebrow Label with Electric Chartreuse Orb */}
+              <div className="inline-flex items-center gap-2.5 mb-5 px-3.5 py-1.5 rounded-full bg-[#F1EBFF] border border-[#DCCCF7] text-[#291638] shadow-xs">
                 <span
-                  className="w-2.5 h-2.5 rounded-full bg-[#E5A93C] shadow-[0_0_10px_#E5A93C]"
+                  className="w-2.5 h-2.5 rounded-full bg-[#D5FF32] shadow-[0_0_10px_#D5FF32]"
                   aria-hidden="true"
                 />
                 <span className="text-[11px] font-bold uppercase tracking-[0.16em]">
@@ -51,7 +51,7 @@ export default function HomePage() {
               </div>
 
               {/* H1 Display Editorial Headline */}
-              <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[74px] xl:text-[88px] text-[#291638] mb-5 leading-[1.02] tracking-tight text-balance">
+              <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[90px] text-[#291638] mb-5 leading-[1.02] tracking-tight text-balance">
                 Fresh Flowers.
                 <br />
                 Sacred Moments.
@@ -71,12 +71,12 @@ export default function HomePage() {
                   className="inline-flex items-center justify-center gap-2.5 min-h-[48px] px-6 rounded-[12px] bg-[#291638] text-white font-bold text-base border border-[#291638] hover:bg-[#3D2252] shadow-[0_4px_16px_-2px_rgba(41,22,56,0.35)] hover:shadow-[0_8px_24px_-2px_rgba(41,22,56,0.5)] hover:-translate-y-0.5 transition-all cursor-pointer group"
                   id="hero-whatsapp-btn"
                 >
-                  <MessageCircle className="w-5 h-5 text-[#E5A93C]" aria-hidden="true" />
+                  <MessageCircle className="w-5 h-5 text-[#D5FF32]" aria-hidden="true" />
                   <span>Order on WhatsApp</span>
                 </a>
                 <Link
                   href="/flowers-and-occasions"
-                  className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 rounded-[12px] bg-[#FFF9F2]/85 hover:bg-[#FFF9F2] text-[#291638] font-semibold text-base border border-[#291638]/20 backdrop-blur-xs transition-all hover:-translate-y-0.5 shadow-xs"
+                  className="inline-flex items-center justify-center gap-2 min-h-[48px] px-5 rounded-[12px] bg-[#FCFAFF]/80 hover:bg-[#FCFAFF] text-[#291638] font-semibold text-base border border-[#291638]/20 backdrop-blur-xs transition-all hover:-translate-y-0.5 shadow-xs"
                   id="hero-occasions-btn"
                 >
                   <span>Browse All Occasions</span>
@@ -87,7 +87,7 @@ export default function HomePage() {
               {/* Subtle Opening Hours & Mandi Sourcing Info */}
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-xs sm:text-sm font-medium text-[#291638]/85 pt-1">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#138A7E] shadow-[0_0_8px_#138A7E]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#D5FF32] shadow-[0_0_8px_#D5FF32]" />
                   <span>Open daily 5:30 AM – 9:00 PM</span>
                 </div>
                 <span className="text-[#291638]/40 hidden sm:inline">·</span>
@@ -97,35 +97,69 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: ~56% Dominant 3D Braided Arch Artwork */}
+            {/* Right Column: ~56% Dominant 3D Braided Arch Sculpture */}
             <div className="lg:col-span-7 relative flex items-center justify-center lg:justify-end animate-hero-fade-up-delay">
-              <div className="relative w-full max-w-[640px] lg:max-w-none lg:w-[114%] lg:-mr-6 animate-gentle-float">
-                {/* Dimensional depth glow behind 3D braided arch sculpture */}
+              <div className="relative w-full max-w-[580px] lg:max-w-none lg:w-[116%] lg:-mr-6 animate-gentle-float">
+                {/* Luminous Chartreuse Orbital Ellipses & Floating Spheres */}
+                <svg
+                  className="absolute -inset-8 sm:-inset-14 w-[calc(100%+64px)] sm:w-[calc(100%+112px)] h-[calc(100%+64px)] sm:h-[calc(100%+112px)] pointer-events-none z-20 animate-orbital-glow"
+                  viewBox="0 0 700 620"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <ellipse
+                    cx="350"
+                    cy="310"
+                    rx="315"
+                    ry="155"
+                    stroke="#D5FF32"
+                    strokeWidth="1.75"
+                    strokeDasharray="8 6"
+                    transform="rotate(-18 350 310)"
+                    opacity="0.9"
+                  />
+                  <ellipse
+                    cx="350"
+                    cy="310"
+                    rx="265"
+                    ry="125"
+                    stroke="#D5FF32"
+                    strokeWidth="1"
+                    transform="rotate(12 350 310)"
+                    opacity="0.3"
+                  />
+                  <circle
+                    cx="95"
+                    cy="235"
+                    r="10"
+                    fill="#D5FF32"
+                    filter="drop-shadow(0 0 12px rgba(213,255,50,0.95))"
+                  />
+                  <circle
+                    cx="595"
+                    cy="400"
+                    r="13"
+                    fill="#D5FF32"
+                    filter="drop-shadow(0 0 16px rgba(213,255,50,0.95))"
+                  />
+                </svg>
+
+                {/* Studio soft glow behind transparent 3D sculpture */}
                 <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] rounded-full bg-[#E5B57A]/40 blur-3xl pointer-events-none"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[112%] h-[112%] rounded-full bg-radial from-[#FFFFFF]/55 via-[#E6D8FF]/35 to-transparent blur-3xl pointer-events-none"
                   aria-hidden="true"
                 />
 
-                {/* 3D Braided Arch Sculpture with seamless fade into canvas */}
-                <div
-                  className="relative w-full aspect-[4/3] pointer-events-none select-none"
-                  style={{
-                    WebkitMaskImage:
-                      "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%)",
-                    maskImage:
-                      "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%)",
-                    WebkitMaskComposite: "source-in",
-                    maskComposite: "intersect",
-                  }}
-                >
+                {/* 3D Braided Arch Artwork - Truly transparent background blending seamlessly into lavender canvas */}
+                <div className="relative w-full aspect-[4/3]">
                   <Image
-                    src="/images/home/hero-braided-arch.webp"
-                    alt="3D editorial floral sculpture featuring a glossy lavender braided arch, blooming peach-pink roses, vibrant turquoise palm leaves, black-and-white geometric cylinder plinths, and floating golden spheres on a warm studio backdrop"
+                    src="/images/home/hero-braided-arch-transparent.webp"
+                    alt="Glossy lavender 3D braided floral arch with peach-pink roses, turquoise tropical leaves, black-and-white geometric pedestals, and floating golden spheres"
                     fill
                     priority
                     unoptimized
-                    sizes="(max-width: 1024px) 100vw, 58vw"
-                    className="object-contain"
+                    sizes="(max-width: 1024px) 100vw, 56vw"
+                    className="object-contain drop-shadow-[0_24px_48px_rgba(41,22,56,0.22)]"
                   />
                 </div>
               </div>
@@ -138,7 +172,7 @@ export default function HomePage() {
       <TrustStrip />
 
       {/* 3. EARLY MORNING ROUTINE BANNER (Pale Lavender Panel) */}
-      <section className="bg-[#EEE6FF] py-12 border-b border-[#DCCCF7]">
+      <section className="bg-[#F1EBFF] py-12 border-b border-[#DCCCF7]">
         <div className="site-container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             <div className="md:col-span-1">
@@ -184,7 +218,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. ADVANCE NOTICE FEATURE SPLIT (Pale Lavender Panel with Chartreuse Accents) */}
-      <section className="site-section bg-[#EEE6FF]/60 border-y border-[#DCCCF7]">
+      <section className="site-section bg-[#F1EBFF] border-y border-[#DCCCF7]">
         <div className="site-container">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Visual on left */}
@@ -329,7 +363,7 @@ export default function HomePage() {
       </section>
 
       {/* 7. TEMPLE FLOWER CARE GUIDE */}
-      <section className="site-section bg-[#EEE6FF]/40 border-t border-[#DCCCF7]">
+      <section className="site-section bg-[#F1EBFF] border-t border-[#DCCCF7]">
         <div className="site-container">
           <SectionHeader
             eyebrow="FLORAL CARE TIPS"
@@ -343,7 +377,7 @@ export default function HomePage() {
                 key={idx}
                 className="site-card p-6 md:p-8 flex flex-col bg-[#FCFAFF]"
               >
-                <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] text-[#291638] flex items-center justify-center font-bold text-sm mb-4 border border-[#DCCCF7]">
+                <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] text-[#291638] flex items-center justify-center font-bold text-sm mb-4 border border-[#DCCCF7]">
                   0{idx + 1}
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-[#291638] mb-2">

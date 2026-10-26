@@ -11,7 +11,7 @@ export function TrustStrip() {
   ];
 
   return (
-    <div className="w-full bg-[#EEE6FF] border-y border-[#DCCCF7] py-5">
+    <div className="w-full bg-[#F1EBFF] border-y border-[#DCCCF7] py-5">
       <div className="site-container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {siteContent.trustStrip.map((item, index) => (

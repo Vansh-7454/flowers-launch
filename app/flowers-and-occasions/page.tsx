@@ -21,7 +21,7 @@ export default function FlowersAndOccasionsPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Compact Editorial Page Header */}
-      <section className="bg-gradient-to-b from-[#EEE6FF] via-[#EEE6FF]/50 to-[#FCFAFF] border-b border-[#DCCCF7] py-12 md:py-16">
+      <section className="bg-gradient-to-b from-[#F1EBFF] via-[#F1EBFF]/50 to-[#FCFAFF] border-b border-[#DCCCF7] py-12 md:py-16">
         <div className="site-container">
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb" className="mb-4">
@@ -94,7 +94,7 @@ export default function FlowersAndOccasionsPage() {
       </section>
 
       {/* Operational Protocol Section (Pale Lavender Panel) */}
-      <section className="site-section bg-[#EEE6FF]/50 border-y border-[#DCCCF7]">
+      <section className="site-section bg-[#F1EBFF] border-y border-[#DCCCF7]">
         <div className="site-container">
           <div className="max-w-[760px] mx-auto text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-2">

@@ -94,7 +94,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Compact Page Header */}
-      <section className="bg-gradient-to-b from-[#EEE6FF] via-[#EEE6FF]/50 to-[#FCFAFF] border-b border-[#DCCCF7] py-12 md:py-16">
+      <section className="bg-gradient-to-b from-[#F1EBFF] via-[#F1EBFF]/50 to-[#FCFAFF] border-b border-[#DCCCF7] py-12 md:py-16">
         <div className="site-container">
           <nav aria-label="Breadcrumb" className="mb-4">
             <ol className="flex items-center gap-2 text-xs text-[#716879]">
@@ -151,7 +151,7 @@ export default function ContactPage() {
                 <div className="space-y-5 text-sm md:text-base">
                   {/* Address */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
                       <MapPin className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
                       <Phone className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -184,7 +184,7 @@ export default function ContactPage() {
 
                   {/* WhatsApp */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
                       <MessageCircle className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -202,7 +202,7 @@ export default function ContactPage() {
 
                   {/* Operating Hours */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-[12px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
+                    <div className="w-10 h-10 rounded-[12px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs">
                       <Clock className="w-5 h-5 text-[#291638]" />
                     </div>
                     <div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Important Pickup Policy Box */}
-                <div className="p-4 rounded-[14px] bg-[#EEE6FF]/50 border border-[#DCCCF7] text-xs text-[#716879] space-y-1">
+                <div className="p-4 rounded-[14px] bg-[#F1EBFF] border border-[#DCCCF7] text-xs text-[#716879] space-y-1">
                   <div className="font-bold text-[#291638] flex items-center gap-1.5">
                     <span>Payment Policy:</span>
                   </div>
@@ -400,7 +400,7 @@ export default function ContactPage() {
                   </button>
 
                   {/* Privacy Notice */}
-                  <div className="p-3.5 rounded-[12px] bg-[#EEE6FF]/60 border border-[#DCCCF7] text-[11px] text-[#716879] flex items-start gap-2">
+                  <div className="p-3.5 rounded-[12px] bg-[#F1EBFF] border border-[#DCCCF7] text-[11px] text-[#716879] flex items-start gap-2">
                     <ShieldAlert className="w-4 h-4 text-[#291638] flex-shrink-0 mt-0.5" />
                     <span>
                       <strong className="text-[#291638]">Privacy notice:</strong> Nothing is stored or transmitted to external servers from this form. Clicking the button simply opens WhatsApp on your phone or computer with this message ready to send.
@@ -414,7 +414,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map & Store Visit Banner (Pale Lavender Panel) */}
-      <section className="bg-[#EEE6FF] py-12 border-t border-[#DCCCF7]">
+      <section className="bg-[#F1EBFF] py-12 border-t border-[#DCCCF7]">
         <div className="site-container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <span className="text-eyebrow text-[#291638] block mb-1 font-bold">

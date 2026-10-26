@@ -6,32 +6,29 @@
 
 export const designTokens = {
   colors: {
-    // Primary colours (Adapted to 3D Braided Arch & Lavender Editorial Palette)
-    warmPeachYellow: "#F8DEC0", // Warm Peach-Yellow - hero canvas & studio backdrop
-    peachCream: "#FDF5EC",      // Peach Cream - subtle highlights & light panels
-    vibrantLavender: "#B99AFF", // Vibrant Lavender - braided arch & accents
-    lightLavender: "#D7C5FF",   // Light Lavender
-    paleLavender: "#EEE6FF",    // Pale Lavender - editorial panels & chips
+    // Primary colours (Exact prompt design tokens)
+    primaryLavender: "#B99AFF", // Primary Lavender
+    vibrantLavender: "#B99AFF", // Primary / Vibrant Lavender
+    lightLavender: "#D7C5FF",   // Light Lavender - hero canvas & accents
+    paleLavender: "#F1EBFF",    // Pale Lavender - editorial panels & chips
     deepPlum: "#291638",        // Deep Plum - typography, headers, dark bands
-    radiantGold: "#E5A93C",     // Radiant Gold - floating spheres, highlights
-    turquoise: "#138A7E",       // Turquoise - palm foliage, live status
-    chartreuse: "#D5FF32",      // Chartreuse Green
-    freshLeafGreen: "#7DA34A",  // Fresh Leaf Green - natural foliage, open badge
+    chartreuse: "#D5FF32",      // Chartreuse Green - interactive highlights & accents
+    leafGreen: "#7DA34A",       // Leaf Green - natural foliage, open badge
     softWhite: "#FCFAFF",       // Soft White - card surfaces, clean content
     
     // Floral accents
-    marigold: "#F49A24",        // Marigold Orange
-    rose: "#D93476",            // Rose Pink
+    marigold: "#F49A24",        // Marigold Accent
+    rose: "#D93476",            // Rose Accent
     jasmine: "#FFF9EE",         // Jasmine White
 
     // Text & borders
     mutedText: "#716879",       // Muted supportive text
     border: "#DCCCF7",          // Editorial borders & dividers
-    peachBorder: "#EDD0B2",     // Warm peach borders for hero section
+    lavenderBorder: "#DCCCF7",  // Subtle lavender border
 
     // Compatibility aliases
     lavender: "#B99AFF",
-    leafGreen: "#7DA34A",
+    freshLeafGreen: "#7DA34A",
     subtleBorder: "#DCCCF7",
   },
 

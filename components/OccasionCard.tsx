@@ -65,7 +65,7 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         {/* Category & Title */}
         <div className="flex items-start gap-3.5 mb-4">
           <div
-            className="w-11 h-11 rounded-[14px] bg-[#EEE6FF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs"
+            className="w-11 h-11 rounded-[14px] bg-[#F1EBFF] flex items-center justify-center flex-shrink-0 border border-[#DCCCF7] shadow-xs"
             aria-hidden="true"
           >
             {renderIcon()}
@@ -95,7 +95,7 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
             {occasion.keyFlowers.map((flower) => (
               <span
                 key={flower}
-                className="px-2.5 py-1 rounded-[8px] bg-[#EEE6FF]/70 text-[#291638] text-xs font-medium border border-[#DCCCF7]"
+                className="px-2.5 py-1 rounded-[8px] bg-[#F1EBFF] text-[#291638] text-xs font-medium border border-[#DCCCF7]"
               >
                 {flower}
               </span>
@@ -104,7 +104,7 @@ export function OccasionCard({ occasion, featured = false }: OccasionCardProps) 
         </div>
 
         {/* Timing Guideline */}
-        <div className="mt-auto mb-6 p-3 rounded-[12px] bg-[#EEE6FF]/50 border border-[#DCCCF7] text-xs text-[#716879]">
+        <div className="mt-auto mb-6 p-3 rounded-[12px] bg-[#F1EBFF] border border-[#DCCCF7] text-xs text-[#716879]">
           <strong className="text-[#291638] font-bold">Timing note: </strong>
           {occasion.advanceNotice}
         </div>

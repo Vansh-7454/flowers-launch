@@ -64,7 +64,7 @@ export function Header() {
                 >
                   {isActive && (
                     <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#E5A93C] shadow-[0_0_6px_#E5A93C]"
+                      className="w-1.5 h-1.5 rounded-full bg-[#D5FF32] shadow-[0_0_6px_#D5FF32]"
                       aria-hidden="true"
                     />
                   )}
@@ -147,7 +147,7 @@ export function Header() {
                   className={`text-lg py-3 px-4 rounded-[12px] font-medium transition-colors ${
                     isActive
                       ? "bg-[#291638] text-white font-semibold"
-                      : "text-[#291638] bg-[#EEE6FF]/50 border border-[#DCCCF7] hover:bg-[#D7C5FF]/30"
+                      : "text-[#291638] bg-[#F1EBFF] border border-[#DCCCF7] hover:bg-[#D7C5FF]/30"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >

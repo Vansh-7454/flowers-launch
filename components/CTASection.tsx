@@ -60,7 +60,7 @@ export function CTASection({
           </a>
           <a
             href={`tel:${siteContent.contact.phoneTel}`}
-            className="btn-secondary w-full sm:w-auto px-7 bg-[#FCFAFF] text-[#291638] border-[#DCCCF7] hover:bg-[#EEE6FF]"
+            className="btn-secondary w-full sm:w-auto px-7 bg-[#FCFAFF] text-[#291638] border-[#DCCCF7] hover:bg-[#F1EBFF]"
             id="cta-call-btn"
           >
             <Phone className="w-5 h-5 text-[#291638]" aria-hidden="true" />
