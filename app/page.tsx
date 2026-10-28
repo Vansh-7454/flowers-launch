@@ -40,19 +40,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: ~44% Editorial Typography & Direct Actions */}
             <div className="lg:col-span-5 flex flex-col items-start z-10 animate-hero-fade-up">
-              {/* Eyebrow Label with Electric Chartreuse Orb */}
-              <div className="inline-flex items-center gap-2.5 mb-5 px-3.5 py-1.5 rounded-full bg-[#F1EBFF] border border-[#E2D5FF] text-[#291638] shadow-xs">
-                <span
-                  className="w-2.5 h-2.5 rounded-full bg-[#D5FF32] shadow-[0_0_10px_#D5FF32]"
-                  aria-hidden="true"
-                />
-                <span className="text-[11px] font-bold uppercase tracking-[0.16em]">
-                  Fresh Flowers & Handcrafted Garlands
-                </span>
-                <span className="text-xs text-[#746781] hidden sm:inline">
-                  · Pune Temple Precinct
-                </span>
-              </div>
 
               {/* H1 Display Editorial Headline */}
               <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[90px] text-[#291638] mb-5 leading-[1.02] tracking-tight text-balance">
